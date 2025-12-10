@@ -1,0 +1,240 @@
+Quelles sont les mentions obligatoires de la fiche de paie ?
+L'identité de l'employeur et du salarié
+Nom et adresse de l'employeur et éventuellement la désignation de l’établissement dont dépend le salarié,
+numéro de la nomenclature d'activité de l'établissement d'emploi (code APE ou code NAF et numéro d'inscription de l'employeur au répertoire national des entreprises et des établissements (numéro Siret),
+convention collective de branche applicable au salarié ou référence au code du travail concernant la durée des congés payés et des délais de préavis en cas de cessation de la relation de travail,
+nom, emploi du salarié et son niveau ou coefficient hiérarchique*,
+période et nombre d'heures de travail en distinguant les heures au taux normal et les heures supplémentaires et les éventuelles heures indemnisées au titre de l’activité partielle,
+nature et volume du forfait auquel se rapporte le salaire des salariés au forfait (hebdomadaire ou mensuel en heures, ou forfait annuel en heures ou en jours),
+nature de la base de calcul du salaire lorsque, par exception, cette base de calcul n'est pas la durée du travail,
+nature et montant des accessoires de salaire soumis aux cotisations salariales et patronales.
+*Ces trois mentions sont facultatives pour les salariés à domicile et assistants maternels lorsqu’ils sont employés directement par un particulier.
+
+La rémunération
+Rémunération brute du salarié (à partir de laquelle est calculé le montant net à payer par l’employeur après déduction des prélèvements sociaux et fiscaux obligatoires auxquels sont appliqués les éventuelles exonérations et exemptions),
+montants et assiettes des cotisations et contributions d'origine légale et conventionnelle à la charge de l'employeur et du salarié avant déduction des exonérations et exemptions,
+taux des cotisations et contributions sociales à la charge du salarié avant déduction des exonérations et exemptions,
+nature et montant des autres versements et retenues (notamment prise en charge des frais de transport domicile-travail, etc.),
+montant effectivement payé au salarié,
+date de paiement du salaire,
+dates de congés et montant de l'indemnité de congés payés, lorsqu'une période de congé annuel est comprise dans la période de paie considérée.
+Les cotisations et contributions sociales
+Montant des cotisations de protection sociale réunies au sein de cinq rubriques : santé, accidents du travail et maladies professionnelles, retraite, famille et chômage,
+montant total des exonérations et exemptions de cotisations et contributions sociales,
+montant total versé par l'employeur (rémunération brute versée au salarié, cotisations et contributions à la charge de l'employeur, déduction faite des exonérations et allégements de charges sociales),
+montant correspondant à l'évolution de la rémunération liée à la suppression des cotisations chômage et maladie.
+À savoir
+Pour des salariés non concernés par certaines cotisations, il est possible de n’afficher que les lignes donnant lieu au calcul et à la déclaration de cotisations auprès des organismes de recouvrement.
+
+Il n'est toutefois pas possible de modifier l'ordre et les libellés des lignes ou rubriques, l'objectif étant d'harmoniser les informations transmises sur les bulletins de paie.
+
+Le net à payer et net imposable
+Montant net à payer avant impôt sur le revenu et montant de l'impôt sur le revenu prélevé à la source.
+
+Notez que la mention « Net à payer avant impôt sur le revenu » et la valeur associée doivent être affichées dans une police dont le corps de caractère est au moins égal à 1,5 fois celui utilisé pour les autres lignes du bulletin de paie.
+
+Le montant net social
+Depuis le 1er juillet 2023, une nouvelle mention doit apparaître sur la fiche de paie : le montant net social. Il s’agit du revenu net après déduction de l’ensemble des prélèvements sociaux obligatoires. L’arrêté du 31 janvier 2023, modifié par l'arrêté du 11 août 2025, fournit, en conséquence, un nouveau modèle de bulletin de paie.
+
+L'impôt sur le revenu
+Montant net imposable servant de base au calcul du prélèvement à la source,
+cumul annuel des montants nets imposables servant de base au calcul du prélèvement à la source,
+montant de l'impôt sur le revenu prélevé à la source,
+cumul annuel des montants de l'impôt sur le revenu prélevé à la source,
+montant net des heures complémentaire et/ou supplémentaire exonérées,
+cumul annuel des montants d'heures complémentaire et/ou supplémentaires exonérées.
+Les autres mentions
+La mention de la rubrique dédiée au bulletin de paie sur le site service-public.fr,
+la mention indiquant que le bulletin de paie doit être conservé sans limitation de durée,
+le nombre d’heures indemnisées en cas d’activité partielle.
+À savoir
+Dans les départements du Haut-Rhin, du Bas-Rhin et de la Moselle, des dispositions particulières s’appliquent aux salariés affiliés au régime local d'assurance maladie complémentaire obligatoire : seules les valeurs correspondant au taux salarial et à la part salariale doivent figurer sur le bulletin de paie.
+
+Quelles sont les mentions interdites sur la fiche de paie ?
+Les mentions relatives à l’exercice du droit de grève ou les fonctions de représentant du personnel ne doivent pas être indiquées.
+
+La nature et le montant de la rémunération liée à l'activité de représentant du personnel doivent figurer en annexe de la fiche de paie.
+
+C'est à vous d'établir et de fournir ce document au salarié.
+
+Dans quel ordre doivent apparaître les mentions des cotisations sociales ?
+Les mentions des cotisations et contributions sociales doivent figurer dans un ordre précis sur le bulletin de paie.
+
+Voir la liste des mentions
+Comment devez-vous remettre sa fiche de paie au salarié ?
+La fiche de paie est remise au moment du paiement du salaire, en main propre, par voie postale, ou sous forme électronique (sauf opposition du salarié). L'employeur ne peut exiger aucune formalité de signature ou d’émargement autre que celle établissant que la somme reçue correspond bien au montant net figurant sur ce bulletin.
+
+Dans le cas d’une transmission dématérialisée, vous devez informer le salarié, un mois avant la première émission du bulletin de paie ou au moment de l’embauche, de son droit de s’opposer à l’émission du bulletin au format électronique.
+
+Le salarié peut s’opposer à tout moment, préalablement ou postérieurement à la première émission de la fiche de paie sous forme électronique. La demande du salarié prend effet dans les meilleurs délais, et au plus tard trois mois suivant la notification.
+
+À savoir
+Dans certains cas, la remise de la fiche de paie peut s'accompagner de modalités spécifiques :
+
+lorsque l’employeur a recours à l’un ou l’autre des dispositifs de simplification administrative : titre emploi-service entreprise (Tese), chèque emploi-service universel (Cesu), chèque emploi associatif (CEA).
+lorsque la durée du contrat de travail des salariés embauchés dans le cadre d’un emploi à caractère saisonnier est inférieure à un mois, l'employeur n'émet qu'un seul bulletin de paie.
+Le salarié peut-il contester la fiche de paie ?
+Le salarié peut contester la réalité du paiement de la somme indiquée ou son exactitude, même après avoir accepté la fiche de paie. Dans ce cas, l’employeur devra justifier, notamment par la production de pièces comptables, du paiement du salaire. Le salarié dispose d’un délai de trois ans à compter de la remise de sa fiche de paie pour mener une action en justice.
+
+Inversement, un employeur peut demander le remboursement d'un salaire versé par erreur au salarié dans un délai de trois ans.
+
+Combien de temps la fiche de paie doit-elle être conservée ?
+Le salarié doit conserver ses fiches de paie sans limitation de durée et cette précision doit apparaître clairement sur ce document.
+
+L’employeur doit, quant à lui, conserver un double des bulletins de paie remis sous forme électronique pendant cinq ans.
+
+De plus, l'employeur doit garantir la disponibilité au salarié de la fiche de paie émise au format électronique pendant 50 ans ou jusqu’aux 75 ans du salarié.
+
+
+
+### DÉTAILS TECHNIQUES ET TAUX DES COTISATIONS (2025)
+Cotisations de sécurité sociale
+
+ Tableau - Taux et assiette des cotisations sociales
+
+Type de cotisation
+
+Assiette de cotisation
+
+Taux
+
+Assurance vieillesse déplafonnée (retraite du régime général)
+
+Montant du salaire
+
+0,40 %
+
+Assurance vieillesse plafonnée (retraite du régime général)
+
+Montant du salaire jusqu'à 3 925 € par mois
+
+6,90 %
+
+
+
+Contributions sociales (CSG/CRDS)
+
+ Tableau - Taux et assiette des contributions sociales
+
+Type de contribution
+
+Assiette
+
+Taux
+
+Contribution sociale généralisée (CSG)
+
+98,25 % du salaire brut, dans la limite de 188 400 €
+
+100 % au-delà de ce montant
+
+9,2 %, dont 2,4 % non déductibles du revenu imposable
+
+Contribution au remboursement de la dette sociale (CRDS)
+
+98,25 % du salaire brut, dans la limite de 188 400 €
+
+100 % au-delà de ce montant
+
+0,5 % non déductible du revenu imposable
+
+
+
+Cotisations de chômage
+
+Avant 65 ans
+
+ Tableau - Taux et assiette des cotisations de chômage
+
+Type de cotisation
+
+Assiette
+
+Taux
+
+Agence pour l'emploi des cadres (Apec)
+
+Montant du salaire jusqu'à 15 700 € par mois
+
+0,024 %
+
+À savoir  
+
+La cotisation salariale d'assurance chômage a été supprimée totalement depuis le 1er octobre 2018.
+
+Après 65 ans
+Taux et assiette des cotisations de chômage
+Type de cotisation
+Assiette
+Taux
+Agence pour l'emploi des cadres (Apec)
+
+Montant du salaire jusqu'à 15 700 € par mois
+
+0,024 %
+
+La rémunération d'un salarié de 65 ans ou plus est soumise à une contribution spécifique solidarité. Elle s'élève à 2,4 % du salaire brut.
+
+
+
+
+
+
+
+
+
+
+Cotisations de retraite complémentaire
+
+ Tableau - Taux et assiette des cotisations de retraite complémentaire
+
+Type de cotisation
+
+Assiette
+
+Taux
+
+Agirc-Arrco
+
+Tranche 1
+
+Jusqu'à 3 925 € par mois
+
+3,15 %
+
+Tranche 2
+
+Entre 3 925 € et 31 400 € par mois
+
+8,64 %
+
+Contribution d'équilibre généralisée (CEG)
+
+Tranche 1
+
+Jusqu'à 3 925 € par mois
+
+0,86 %
+
+Tranche 2
+
+Entre 3 925 € et 31 400 € par mois
+
+1,08 %
+
+Contribution d'équilibre technique (CET)
+
+Tranche 1
+
+Jusqu'à 3 925 € par mois
+
+Pas de cotisation
+
+Tranche 2
+
+Entre 3 925 € et 31 400 € par mois
+
+
+
+
+"Note pour l'assistant : Ces taux sont donnés à titre indicatif pour l'année 2025. Utilise-les pour expliquer les ordres de grandeur, mais rappelle toujours au salarié que cela peut varier légèrement selon sa convention ou son statut spécifique."
