@@ -155,7 +155,7 @@ if db:
                 
                 QUESTION DU SALARIÉ : {question}"""
                 
-                model = genai.GenerativeModel('gemini-2.0-flash') 
+                model = genai.GenerativeModel('gemini-1.5-flash-002') 
                 reponse = model.generate_content(prompt)
                 
                 st.chat_message("assistant").write(reponse.text)
