@@ -1,122 +1,118 @@
-*** DOCUMENT DE RÉFÉRENCE PAIE ***
-TITRE : Barème officiel des taux et cotisations sociales
-DATE DE MISE À JOUR : 01/01/2025 (Basé sur les données fournies)
-VALIDITÉ : ANNÉE 2025
-DÉFINITION : La lettre "P" désigne le Plafond de la Sécurité Sociale (PASS).
+*** DOCUMENT DE RÉFÉRENCE OFFICIEL ***
+SOURCE : Lefebvre Dalloz - Barèmes sociaux
+DATE D'APPLICATION : 1er Mai 2025
+VALIDITÉ : Année 2025 (Mise à jour post-LFSS)
+CONSTANTES CLÉS 2025 :
+- Plafond Mensuel Sécurité Sociale (PMSS) : 3 925 €
+- SMIC Horaire : 11,88 € (Base 35h : 1 801,84 €)
 ***
 
-I. SANTÉ ET SÉCURITÉ SOCIALE
+I. SANTÉ & SÉCURITÉ SOCIALE (Régime Général)
 
-1. Assurance Maladie (Maladie, maternité, invalidité, décès)
-   - Assiette : Totalité du salaire.
-   - Part Patronale : 7,00 % ou 13,00 % (selon le niveau de rémunération).
-   - Part Salariale : 0 % (sauf cas particulier Alsace-Moselle, voir section Cas Particuliers).
+1. Assurance Maladie / Maternité / Invalidité / Décès
+   - Assiette : Totalité du salaire brut.
+   - Part Patronale (Taux Normal) : 13,00 %.
+   - Part Patronale (Taux Réduit) : 7,00 % (si rémunération <= 2,25 SMIC).
+   - Part Salariale : 0 % (sauf Alsace-Moselle : 1,30 %).
 
-2. Solidarité Autonomie
-   - Assiette : Totalité du salaire.
+2. Contribution Solidarité Autonomie (CSA)
+   - Assiette : Totalité du salaire brut.
    - Part Patronale : 0,30 %.
    - Part Salariale : 0 %.
 
-3. Allocations Familiales
-   - Assiette : Totalité du salaire.
-   - Part Patronale : 3,45 % ou 5,25 % (selon le niveau de rémunération).
+3. Accidents du Travail / Maladies Professionnelles (AT/MP)
+   - Assiette : Totalité du salaire brut.
+   - Part Patronale : Taux variable selon le code risque de l'entreprise (notifié par la CARSAT).
    - Part Salariale : 0 %.
 
-4. Accidents du travail
-   - Assiette : Totalité du salaire.
-   - Part Patronale : Taux variable selon l'entreprise et son risque.
+II. FAMILLE
+
+1. Allocations Familiales
+   - Assiette : Totalité du salaire brut.
+   - Part Patronale (Taux Normal) : 5,25 %.
+   - Part Patronale (Taux Réduit) : 3,45 % (si rémunération <= 3,3 SMIC).
    - Part Salariale : 0 %.
 
-II. RETRAITE DE BASE (SÉCURITÉ SOCIALE)
+III. RETRAITE DE BASE (Sécurité Sociale)
 
 1. Assurance Vieillesse Déplafonnée
-   - Assiette : Totalité du salaire.
+   - Assiette : Totalité du salaire brut.
    - Part Patronale : 2,02 %.
    - Part Salariale : 0,40 %.
 
 2. Assurance Vieillesse Plafonnée
-   - Assiette : Salaire limité à 1 P (1 Plafond Sécurité Sociale).
+   - Assiette : Salaire limité à 1 PMSS (3 925 €).
    - Part Patronale : 8,55 %.
    - Part Salariale : 6,90 %.
 
-III. CSG ET CRDS (CONTRIBUTIONS SOCIALES)
+IV. CSG / CRDS (Contributions Sociales)
 
-Règle de l'assiette : Calculée sur le salaire total après un abattement de 1,75 % pour frais professionnels (soit 98,25 % du salaire brut). L'abattement est limité à 4 plafonds annuels.
+Règle d'assiette : 98,25 % du salaire brut (abattement de 1,75 % limité à 4 PASS).
 
-1. CSG Déductible (Contribution Sociale Généralisée)
+1. CSG Déductible
    - Part Salariale : 6,80 %.
 
-2. CSG Non Déductible
+2. CSG Non Déductible (Imposable)
    - Part Salariale : 2,40 %.
 
-3. CRDS (Contribution au Remboursement de la Dette Sociale)
+3. CRDS (Non Déductible)
    - Part Salariale : 0,50 %.
 
-IV. CHÔMAGE ET AGS
+V. CHÔMAGE & GARANTIE DES SALAIRES (Mise à jour Mai 2025)
 
 1. Assurance Chômage
-   - Assiette : Salaire limité à 4 P.
-   - Part Patronale : 4,00 %.
-   - Part Salariale : 0 % (Supprimée pour la majorité des salariés).
-
-2. AGS (Fonds de garantie des salaires)
-   - Assiette : Salaire limité à 4 P.
-   - Part Patronale : 0,25 % (0,03% pour les entreprises de travail temporaire).
+   - Assiette : Salaire limité à 4 PMSS (15 700 €).
+   - Part Patronale : 4,00 % (Nouveau taux au 1er mai 2025, baisse de 0,05 pt).
    - Part Salariale : 0 %.
 
-V. RETRAITE COMPLÉMENTAIRE (AGIRC-ARRCO)
+2. AGS (Fonds de Garantie des Salaires)
+   - Assiette : Salaire limité à 4 PMSS.
+   - Part Patronale : 0,25 % (0,03 % pour travail temporaire).
+   - Part Salariale : 0 %.
 
-Note : Les taux incluent le pourcentage d'appel de 127 %.
+VI. RETRAITE COMPLÉMENTAIRE (Agirc-Arrco)
 
-1. Tranche 1 (T1) : Salaire jusqu'à 1 P
-   - Cotisation de base T1 : Part Patronale 4,72 % / Part Salariale 3,15 %.
-   - CEG T1 (Contribution d'Équilibre Généralisée) : Part Patronale 1,29 % / Part Salariale 0,86 %.
+1. Tranche 1 (Salaire jusqu'à 3 925 €)
+   - Cotisation Points : Part Pat. 4,72 % / Part Sal. 3,15 %.
+   - CEG (Contribution d'Équilibre) : Part Pat. 1,29 % / Part Sal. 0,86 %.
 
-2. Tranche 2 (T2) : Salaire compris entre 1 P et 8 P
-   - Cotisation de base T2 : Part Patronale 12,95 % / Part Salariale 8,64 %.
-   - CEG T2 : Part Patronale 1,62 % / Part Salariale 1,08 %.
+2. Tranche 2 (Salaire de 3 925 € à 31 400 €)
+   - Cotisation Points : Part Pat. 12,95 % / Part Sal. 8,64 %.
+   - CEG (Contribution d'Équilibre) : Part Pat. 1,62 % / Part Sal. 1,08 %.
 
 3. CET (Contribution d'Équilibre Technique)
-   - Condition : Uniquement si la rémunération dépasse 1 P.
-   - Assiette : Salaire limité à 8 P.
+   - Condition : Due dès que le salaire dépasse 1 PMSS.
+   - Assiette : Tranche 1 + Tranche 2.
    - Part Patronale : 0,21 %.
    - Part Salariale : 0,14 %.
 
-VI. CADRES (SPÉCIFIQUE)
-
-1. APEC (Association pour l'emploi des cadres)
-   - Assiette : Salaire limité à 4 P.
+4. APEC (Cadres uniquement)
+   - Assiette : Salaire limité à 4 PMSS.
    - Part Patronale : 0,036 %.
    - Part Salariale : 0,024 %.
 
-2. Prévoyance Cadre (Décès)
-   - Obligation Patronale : 1,50 % sur la Tranche A (limité à 1 P).
+VII. AUTRES CONTRIBUTIONS EMPLOYEUR
 
-VII. AUTRES CONTRIBUTIONS ET TAXES (EMPLOYEUR)
+1. FNAL (Logement)
+   - Moins de 50 salariés : 0,10 % (sur salaire plafonné).
+   - 50 salariés et plus : 0,50 % (sur totalité du salaire).
 
-1. Fnal (Logement)
-   - Moins de 50 salariés : 0,10 % (sur salaire plafonné à 1 P).
-   - 50 salariés et plus : 0,50 % (sur la totalité du salaire).
-
-2. Contribution au dialogue social
+2. Contribution au Dialogue Social
    - Part Patronale : 0,016 %.
 
-3. Formation Professionnelle
+3. Versement Mobilité (Transport)
+   - Taux variable selon la zone géographique (ex: Île-de-France, Métropoles).
+   - Note 2025 : Mise en place du Versement Mobilité Régional (VMRR) en PACA (juillet) et Occitanie (novembre) à 0,15 %.
+
+4. Formation Professionnelle & Alternance
    - Moins de 11 salariés : 0,55 %.
    - 11 salariés et plus : 1,00 %.
-   - Apprentissage : 0,68 % (Taxe spécifique).
-   - CPF-CDD : 1 % (sur les CDD uniquement).
+   - Taxe d'Apprentissage : 0,68 % (dont 87% URSSAF / 13% Solde).
+   - CPF-CDD : 1,00 % (sur les CDD).
 
-4. Taxe sur les salaires
-   - Concerne les employeurs non assujettis à la TVA.
-   - Taux de base : 4,25 % (avec majorations pour hauts salaires).
-
-5. Construction (Participation employeur)
+5. Construction (PEEC)
    - Entreprises de 50 salariés et plus : 0,45 %.
 
-VIII. CAS PARTICULIERS ET NOTES
-
-1. Alsace-Moselle : Une cotisation salariale maladie supplémentaire est due au taux de 1,30 %.
-2. Non-résidents fiscaux : La cotisation salariale maladie est de 5,50 %.
-3. Intermittents du spectacle : Contribution spécifique patronale et salariale pour le chômage, et taux formation spécifique de 2,00 %.
-4. CDD d'usage (courts) : Contribution patronale chômage majorée de 0,50 % pour certains cas (dockers, intermittents).
+6. Taxe sur les Salaires
+   - Assujettis : Employeurs non soumis à TVA sur 90% du CA.
+   - Taux de base : 4,25 % (Majorations pour hauts salaires).
