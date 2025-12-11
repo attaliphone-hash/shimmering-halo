@@ -1,0 +1,122 @@
+*** DOCUMENT DE RÉFÉRENCE PAIE ***
+TITRE : Barème officiel des taux et cotisations sociales
+DATE DE MISE À JOUR : 01/01/2025 (Basé sur les données fournies)
+VALIDITÉ : ANNÉE 2025
+DÉFINITION : La lettre "P" désigne le Plafond de la Sécurité Sociale (PASS).
+***
+
+I. SANTÉ ET SÉCURITÉ SOCIALE
+
+1. Assurance Maladie (Maladie, maternité, invalidité, décès)
+   - Assiette : Totalité du salaire.
+   - Part Patronale : 7,00 % ou 13,00 % (selon le niveau de rémunération).
+   - Part Salariale : 0 % (sauf cas particulier Alsace-Moselle, voir section Cas Particuliers).
+
+2. Solidarité Autonomie
+   - Assiette : Totalité du salaire.
+   - Part Patronale : 0,30 %.
+   - Part Salariale : 0 %.
+
+3. Allocations Familiales
+   - Assiette : Totalité du salaire.
+   - Part Patronale : 3,45 % ou 5,25 % (selon le niveau de rémunération).
+   - Part Salariale : 0 %.
+
+4. Accidents du travail
+   - Assiette : Totalité du salaire.
+   - Part Patronale : Taux variable selon l'entreprise et son risque.
+   - Part Salariale : 0 %.
+
+II. RETRAITE DE BASE (SÉCURITÉ SOCIALE)
+
+1. Assurance Vieillesse Déplafonnée
+   - Assiette : Totalité du salaire.
+   - Part Patronale : 2,02 %.
+   - Part Salariale : 0,40 %.
+
+2. Assurance Vieillesse Plafonnée
+   - Assiette : Salaire limité à 1 P (1 Plafond Sécurité Sociale).
+   - Part Patronale : 8,55 %.
+   - Part Salariale : 6,90 %.
+
+III. CSG ET CRDS (CONTRIBUTIONS SOCIALES)
+
+Règle de l'assiette : Calculée sur le salaire total après un abattement de 1,75 % pour frais professionnels (soit 98,25 % du salaire brut). L'abattement est limité à 4 plafonds annuels.
+
+1. CSG Déductible (Contribution Sociale Généralisée)
+   - Part Salariale : 6,80 %.
+
+2. CSG Non Déductible
+   - Part Salariale : 2,40 %.
+
+3. CRDS (Contribution au Remboursement de la Dette Sociale)
+   - Part Salariale : 0,50 %.
+
+IV. CHÔMAGE ET AGS
+
+1. Assurance Chômage
+   - Assiette : Salaire limité à 4 P.
+   - Part Patronale : 4,00 %.
+   - Part Salariale : 0 % (Supprimée pour la majorité des salariés).
+
+2. AGS (Fonds de garantie des salaires)
+   - Assiette : Salaire limité à 4 P.
+   - Part Patronale : 0,25 % (0,03% pour les entreprises de travail temporaire).
+   - Part Salariale : 0 %.
+
+V. RETRAITE COMPLÉMENTAIRE (AGIRC-ARRCO)
+
+Note : Les taux incluent le pourcentage d'appel de 127 %.
+
+1. Tranche 1 (T1) : Salaire jusqu'à 1 P
+   - Cotisation de base T1 : Part Patronale 4,72 % / Part Salariale 3,15 %.
+   - CEG T1 (Contribution d'Équilibre Généralisée) : Part Patronale 1,29 % / Part Salariale 0,86 %.
+
+2. Tranche 2 (T2) : Salaire compris entre 1 P et 8 P
+   - Cotisation de base T2 : Part Patronale 12,95 % / Part Salariale 8,64 %.
+   - CEG T2 : Part Patronale 1,62 % / Part Salariale 1,08 %.
+
+3. CET (Contribution d'Équilibre Technique)
+   - Condition : Uniquement si la rémunération dépasse 1 P.
+   - Assiette : Salaire limité à 8 P.
+   - Part Patronale : 0,21 %.
+   - Part Salariale : 0,14 %.
+
+VI. CADRES (SPÉCIFIQUE)
+
+1. APEC (Association pour l'emploi des cadres)
+   - Assiette : Salaire limité à 4 P.
+   - Part Patronale : 0,036 %.
+   - Part Salariale : 0,024 %.
+
+2. Prévoyance Cadre (Décès)
+   - Obligation Patronale : 1,50 % sur la Tranche A (limité à 1 P).
+
+VII. AUTRES CONTRIBUTIONS ET TAXES (EMPLOYEUR)
+
+1. Fnal (Logement)
+   - Moins de 50 salariés : 0,10 % (sur salaire plafonné à 1 P).
+   - 50 salariés et plus : 0,50 % (sur la totalité du salaire).
+
+2. Contribution au dialogue social
+   - Part Patronale : 0,016 %.
+
+3. Formation Professionnelle
+   - Moins de 11 salariés : 0,55 %.
+   - 11 salariés et plus : 1,00 %.
+   - Apprentissage : 0,68 % (Taxe spécifique).
+   - CPF-CDD : 1 % (sur les CDD uniquement).
+
+4. Taxe sur les salaires
+   - Concerne les employeurs non assujettis à la TVA.
+   - Taux de base : 4,25 % (avec majorations pour hauts salaires).
+
+5. Construction (Participation employeur)
+   - Entreprises de 50 salariés et plus : 0,45 %.
+
+VIII. CAS PARTICULIERS ET NOTES
+
+1. Alsace-Moselle : Une cotisation salariale maladie supplémentaire est due au taux de 1,30 %.
+2. Non-résidents fiscaux : La cotisation salariale maladie est de 5,50 %.
+3. Intermittents du spectacle : Contribution spécifique patronale et salariale pour le chômage, et taux formation spécifique de 2,00 %.
+4. CDD d'usage (courts) : Contribution patronale chômage majorée de 0,50 % pour certains cas (dockers, intermittents).
