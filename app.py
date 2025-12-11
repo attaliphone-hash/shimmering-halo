@@ -46,7 +46,7 @@ if not api_key:
 @st.cache_resource(show_spinner=False)
 def charger_cerveau():
     client = chromadb.Client()
-    nom_collection = "paie_expert_v4" # Nouvelle version pour forcer la mise à jour des données
+    nom_collection = "paie_expert_v5" # Nouvelle version pour forcer la lecture de tous les fichiers
 
     try:
         client.delete_collection(nom_collection)
@@ -55,7 +55,7 @@ def charger_cerveau():
     
     collection = client.create_collection(nom_collection)
 
-    # Récupération des fichiers .txt
+    # Récupération de TOUS les fichiers .txt (Taux + Explications)
     tous_les_fichiers = [f for f in os.listdir('.') if f.endswith('.txt') and f != 'requirements.txt']
     
     if not tous_les_fichiers:
@@ -103,7 +103,7 @@ def charger_cerveau():
         try:
             res = genai.embed_content(model=modele_embedding, content=doc, task_type="retrieval_document")
             embeddings.append(res['embedding'])
-            time.sleep(0.1) # Très rapide car quota illimité maintenant
+            time.sleep(0.05) # Très rapide car quota illimité maintenant
         except:
             pass
         barre.progress(min((i + 1) / total, 1.0))
@@ -126,5 +126,52 @@ else:
 
 # Historique de conversation
 if "messages" not in st.session_state:
-    st.session_state.messages = [
-        {"role": "assistant", "content": "Bonjour ! Je suis connecté aux barèmes officiels 2025. Quelle ligne de votre bulletin de
+    # La phrase ci-dessous est bien sur une seule ligne pour éviter le bug
+    st.session_state.messages = [{"role": "assistant", "content": "Bonjour ! Je suis connecté aux barèmes officiels 2025. Quelle ligne de votre bulletin de paie voulez-vous comprendre ?"}]
+
+for msg in st.session_state.messages:
+    # Avatar personnalisé : Cravate pour l'assistant, Bonhomme pour l'utilisateur
+    icone = "👔" if msg["role"] == "assistant" else "👤"
+    st.chat_message(msg["role"], avatar=icone).write(msg["content"])
+
+# Zone de saisie
+if question := st.chat_input("Votre question (ex: C'est quoi la CSG ? Mon brut est de 3000€...)"):
+    st.session_state.messages.append({"role": "user", "content": question})
+    st.chat_message("user", avatar="👤").write(question)
+
+    if db:
+        try:
+            # 1. Recherche RAG
+            q_vec = genai.embed_content(model="models/text-embedding-004", content=question, task_type="retrieval_query")
+            res = db.query(query_embeddings=[q_vec['embedding']], n_results=5)
+            
+            if res['documents'] and res['documents'][0]:
+                contexte = "\n\n".join(res['documents'][0])
+                
+                # 2. Prompt Expert & Pédagogue
+                prompt = f"""Tu es un Expert Paie et Pédagogue.
+                Ta mission : Répondre à la question du salarié en utilisant les barèmes officiels fournis ci-dessous.
+                
+                Règles d'or :
+                - Ton : Bienveillant, clair, rassurant.
+                - Précision : Utilise les chiffres du contexte (Taux 2025).
+                - Si on te demande un calcul, fais-le étape par étape.
+                - Cite tes sources implicitement ("Selon les barèmes officiels...").
+                
+                DOCUMENTS DE RÉFÉRENCE (CONTEXTE) :
+                {contexte}
+                
+                QUESTION DU SALARIÉ : {question}"""
+                
+                # --- LE MOTEUR (Maintenant débridé grâce à la facturation) ---
+                # On utilise le modèle 2.0 Flash standard
+                model = genai.GenerativeModel('models/gemini-2.0-flash')
+                
+                reponse = model.generate_content(prompt)
+                
+                st.chat_message("assistant", avatar="👔").write(reponse.text)
+                st.session_state.messages.append({"role": "assistant", "content": reponse.text})
+            else:
+                st.warning("Je n'ai pas trouvé cette information dans mes documents de référence.")
+        except Exception as e:
+            st.error(f"Une erreur technique est survenue : {e}")
