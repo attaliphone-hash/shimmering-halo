@@ -127,7 +127,7 @@ else:
 # Historique de conversation
 if "messages" not in st.session_state:
     # La phrase ci-dessous est bien sur une seule ligne pour éviter le bug
-    st.session_state.messages = [{"role": "assistant", "content": "Bonjour ! Je suis connecté aux barèmes officiels 2025. Quelle ligne de votre bulletin de paie voulez-vous comprendre ?"}]
+    st.session_state.messages = [{"role": "assistant", "content": "Bonjour ! Quelle ligne de votre bulletin de paie voulez-vous comprendre ?"}]
 
 for msg in st.session_state.messages:
     # Avatar personnalisé : Cravate pour l'assistant, Bonhomme pour l'utilisateur
@@ -150,7 +150,7 @@ if question := st.chat_input("Votre question (ex: C'est quoi la CSG ? Mon brut e
                 
                 # 2. Prompt Expert & Pédagogue
                 prompt = f"""Tu es un Expert Paie et Pédagogue.
-                Ta mission : Répondre à la question du salarié en utilisant les barèmes officiels fournis ci-dessous.
+                Ta mission : Répondre à la question du salarié en utilisant les barèmes officiels fournis ci-dessous. Et autres information fournis dans les documents txt
                 
                 Règles d'or :
                 - Ton : Bienveillant, clair, rassurant.
