@@ -22,7 +22,7 @@ import time
 # --- CONFIGURATION ---
 st.set_page_config(page_title="Comprendre Ma Paie", page_icon="💡")
 st.title("Comprendre Ma Paie 💡")
-st.caption("Assistant pédagogique pour votre bulletin de salaire")
+st.caption("L'expert pour tout comprendre de votre bulletin de salaire ©2025-2026 Sylvain Attal")
 
 # --- 1. SÉCURITÉ & CONNEXION ---
 with st.sidebar:
