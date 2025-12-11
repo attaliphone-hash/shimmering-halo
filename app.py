@@ -47,19 +47,6 @@ with st.sidebar:
     
     if api_key:
         genai.configure(api_key=api_key)
-        if api_key:
-        genai.configure(api_key=api_key)
-        
-        # --- DÉBUT DU CODE ESPION ---
-        st.write("📋 **LISTE OFFICIELLE DES MODÈLES DISPONIBLES :**")
-        try:
-            for m in genai.list_models():
-                if 'generateContent' in m.supported_generation_methods:
-                    st.write(f"- `{m.name}`")
-            st.stop() # On arrête tout pour que vous ayez le temps de lire
-        except Exception as e:
-            st.error(f"Erreur de liste : {e}")
-        # --- FIN DU CODE ESPION ---
 
 if not api_key:
     st.warning("⬅️ Veuillez entrer une clé API pour commencer.")
