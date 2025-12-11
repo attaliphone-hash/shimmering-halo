@@ -13,12 +13,6 @@ import google.generativeai as genai
 import chromadb
 import time
 
-import streamlit as st
-import google.generativeai as genai
-import chromadb
-import os
-import time
-
 # --- CONFIGURATION ---
 st.set_page_config(page_title="Comprendre Ma Paie", page_icon="💡")
 st.title("Comprendre Ma Paie 💡")
@@ -47,10 +41,31 @@ with st.sidebar:
     
     if api_key:
         genai.configure(api_key=api_key)
+        
+        # --- 🕵️‍♂️ DÉBUT DU CODE ESPION ---
+        st.write("---")
+        st.warning("🕵️‍♂️ MODE DIAGNOSTIC ACTIVÉ")
+        st.write("**Voici la liste EXACTE des modèles disponibles pour votre clé :**")
+        try:
+            liste_modeles = []
+            for m in genai.list_models():
+                if 'generateContent' in m.supported_generation_methods:
+                    st.code(m.name) # Affiche le nom exact
+                    liste_modeles.append(m.name)
+            
+            if not liste_modeles:
+                st.error("Aucun modèle trouvé ! Vérifiez votre clé API.")
+            
+            st.stop() # 🛑 ON ARRÊTE TOUT ICI POUR LIRE LA LISTE
+        except Exception as e:
+            st.error(f"Erreur lors du scan : {e}")
+            st.stop()
+        # --- 🕵️‍♂️ FIN DU CODE ESPION ---
 
 if not api_key:
     st.warning("⬅️ Veuillez entrer une clé API pour commencer.")
     st.stop()
+
 # --- 2. FONCTION D'INDEXATION ---
 @st.cache_resource(show_spinner=False)
 def charger_cerveau():
@@ -100,67 +115,3 @@ def charger_cerveau():
         genai.embed_content(model=modele_embedding, content="Test", task_type="retrieval_document")
     except Exception as e:
         barre.empty()
-        st.error(f"⛔️ Erreur API : {e}")
-        return None
-
-    for i, doc in enumerate(docs_globaux):
-        try:
-            res = genai.embed_content(model=modele_embedding, content=doc, task_type="retrieval_document")
-            embeddings.append(res['embedding'])
-            time.sleep(1.0)
-        except:
-            break
-        barre.progress(min((i + 1) / total, 1.0))
-    
-    barre.empty()
-    
-    if len(embeddings) > 0:
-        collection.add(documents=docs_globaux, ids=ids_globaux, embeddings=embeddings)
-        return collection
-    return None
-
-# --- 3. DÉMARRAGE ---
-with st.spinner("Préparation de l'assistant..."):
-    db = charger_cerveau()
-
-if db:
-    st.success("✅ Assistant prêt à expliquer !")
-
-    if "messages" not in st.session_state:
-        st.session_state.messages = [{"role": "assistant", "content": "Bonjour ! Une ligne de votre bulletin de paie vous semble obscure ? Donnez-moi son nom, je vous l'explique simplement. 😊"}]
-
-    for msg in st.session_state.messages:
-        st.chat_message(msg["role"]).write(msg["content"])
-
-    if question := st.chat_input("Ex: C'est quoi la CSG ?"):
-        st.session_state.messages.append({"role": "user", "content": question})
-        st.chat_message("user").write(question)
-
-        try:
-            q_vec = genai.embed_content(model="models/text-embedding-004", content=question, task_type="retrieval_query")
-            res = db.query(query_embeddings=[q_vec['embedding']], n_results=5)
-            
-            if res['documents'] and res['documents'][0]:
-                contexte = "\n\n".join(res['documents'][0])
-                
-                # --- PROMPT PÉDAGOGIQUE ---
-                prompt = f"""Tu es un assistant pédagogique expert en paie, bienveillant et clair.
-                Ta mission : Expliquer des termes complexes de paie à un salarié novice.
-                Consignes :
-                1. Utilise des mots simples, évite le jargon technique froid.
-                2. Sois rassurant.
-                3. Base-toi UNIQUEMENT sur le contexte fourni ci-dessous.
-                
-                CONTEXTE : {contexte}
-                
-                QUESTION DU SALARIÉ : {question}"""
-                
-                model = genai.GenerativeModel('gemini-1.5-flash-002') 
-                reponse = model.generate_content(prompt)
-                
-                st.chat_message("assistant").write(reponse.text)
-                st.session_state.messages.append({"role": "assistant", "content": reponse.text})
-            else:
-                st.warning("Je n'ai pas trouvé d'explication dans mes guides pour ce terme.")
-        except Exception as e:
-            st.error(f"Erreur : {e}")
