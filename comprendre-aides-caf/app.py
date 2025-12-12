@@ -122,7 +122,7 @@ if prompt := st.chat_input("Ex: Quel est le montant du RSA pour une personne seu
         message_placeholder = st.empty()
         try:
             # Appel à Google Gemini (Flash est rapide et gratuit)
-            model = genai.GenerativeModel('gemini-1.5-flash')
+            model = genai.GenerativeModel('gemini-2.0-flash')
             response = model.generate_content(system_prompt, stream=True)
             
             full_response = ""
