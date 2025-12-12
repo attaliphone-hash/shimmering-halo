@@ -49,7 +49,7 @@ if not api_key:
 def charger_cerveau():
     client = chromadb.Client()
     # On change de version pour forcer l'intégration du fichier Micro-Entrepreneur
-    nom_collection = "impots_expert_v4_micro" 
+    nom_collection = "impots_expert_v5_final" 
 
     try:
         client.delete_collection(nom_collection)
@@ -164,4 +164,16 @@ if question := st.chat_input("Votre question (ex: Je suis auto-entrepreneur, com
                 
                 QUESTION DU CONTRIBUABLE : {question}"""
                 
-                # --- LE
+                # --- LE MOTEUR ---
+                model = genai.GenerativeModel('models/gemini-2.0-flash')
+                
+                reponse = model.generate_content(prompt)
+                
+                st.chat_message("assistant", avatar="🏛️").write(reponse.text)
+                st.session_state.messages.append({"role": "assistant", "content": reponse.text})
+            else:
+                st.warning("Je n'ai pas trouvé cette information précise dans ma base documentaire (Fichiers textes).")
+        
+        # C'est cette partie qui manquait probablement :
+        except Exception as e:
+            st.error(f"Une erreur technique est survenue : {e}")
