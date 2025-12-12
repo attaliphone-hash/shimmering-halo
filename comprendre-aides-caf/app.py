@@ -79,7 +79,7 @@ st.title("Comprendre Mes Aides (CAF) 🏦")
 st.markdown("_L'assistant expert pour décrypter le RSA, la Prime d'Activité et les APL selon les barèmes 2025._")
 
 if collection:
-    st.success("✅ Assistant connecté aux barèmes CAF 2025 (Mode Google Gemini)")
+    st.success("✅ Assistant connecté aux barèmes CAF 2025")
 
 if "messages" not in st.session_state:
     st.session_state.messages = [
