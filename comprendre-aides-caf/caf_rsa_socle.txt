@@ -1,0 +1,33 @@
+DOCUMENT DE RÉFÉRENCE : LE RSA (REVENU DE SOLIDARITÉ ACTIVE) - CAF
+SUJET : Conditions, Montants forfaitaires, Calcul différentiel.
+SOURCE : caf.fr / service-public.fr (Montants 2025 estimés après revalorisation d'avril 2024)
+
+I. LE PRINCIPE : UNE ALLOCATION DIFFÉRENTIELLE
+Le RSA n'est pas un montant fixe que l'on touche en plus de ses revenus. C'est un "revenu minimum garanti".
+La CAF calcule : (Montant Forfaitaire théorique selon votre famille) MOINS (L'ensemble des ressources de votre foyer).
+Le RSA versé est la différence. Si vos ressources dépassent le montant forfaitaire, le RSA est égal à zéro.
+
+II. CONDITIONS D'ÉLIGIBILITÉ
+- Avoir plus de 25 ans (ou moins de 25 ans si vous avez un enfant à charge ou si vous avez travaillé 2 ans sur les 3 dernières années - "RSA Jeune").
+- Résider en France de manière stable et effective.
+- Avoir des ressources inférieures au plafond.
+
+III. MONTANTS FORFAITAIRES (SOCLE) - BASE POUR LE CALCUL
+Ce sont les montants maximums théoriques si vous n'avez AUCUNE autre ressource (ni salaire, ni chômage, ni pension alimentaire...).
+
+Pour une personne seule (sans enfant) :
+- Sans aide au logement : env. 635 € / mois.
+- Si vous touchez une APL ou êtes logé gratuitement, ce montant est réduit du "Forfait Logement" (env. 76 €). Le RSA socle réel est donc d'env. 559 €.
+
+Pour un couple (sans enfant) :
+- Sans aide au logement : env. 953 € / mois.
+- Avec APL ou logé gratuitement : env. 801 € (après déduction du forfait logement couple d'env. 152 €).
+
+Majoration pour enfants à charge (s'ajoute au socle) :
+- Par enfant ou personne à charge supplémentaire : Le montant forfaitaire est augmenté (env. +254 € pour le 1er et 2e enfant, puis +381 € par enfant supplémentaire à partir du 3e).
+
+IV. LE FORFAIT LOGEMENT
+Si vous recevez une aide au logement (APL, ALF, ALS) ou si vous n'avez pas de charges de logement (logé gratuitement), la CAF déduit automatiquement un montant forfaitaire de votre RSA socle.
+- 1 personne : env. 76 €
+- 2 personnes : env. 152 €
+- 3 personnes ou plus : env. 188 €

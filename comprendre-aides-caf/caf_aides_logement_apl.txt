@@ -1,0 +1,22 @@
+DOCUMENT DE RÉFÉRENCE : LES AIDES AU LOGEMENT (APL, ALF, ALS) - CAF
+SUJET : Loyer, Conditions du logement, Plafonds, R0.
+SOURCE : caf.fr / service-public.fr (À jour 2025)
+
+I. LES TROIS TYPES D'AIDES
+- APL (Aide Personnalisée au Logement) : Pour les logements conventionnés (HLM, résidences étudiantes, certains logements privés). L'aide est souvent versée directement au bailleur (tiers payant).
+- ALF (Allocation de Logement Familiale) : Si vous n'avez pas droit à l'APL mais avez des enfants, êtes marié depuis moins de 5 ans (avant 40 ans) ou avez une personne à charge.
+- ALS (Allocation de Logement Sociale) : Pour tous les autres cas (souvent les locataires du parc privé non conventionné, les étudiants...).
+
+II. CONDITIONS LIÉES AU LOGEMENT
+- Le logement doit être votre résidence principale.
+- Il doit être décent (normes de surface et de confort).
+- Il doit faire l'objet d'un bail (contrat de location). Vous ne pouvez pas être locataire de vos parents ou grands-parents s'ils sont propriétaires du logement.
+
+III. CONDITIONS DE RESSOURCES
+Le calcul est complexe et prend en compte :
+1. La composition du foyer et le lieu de résidence (Zone 1, 2 ou 3).
+2. Le montant du loyer (dans la limite d'un plafond).
+3. Vos ressources (le "R0"). Attention : Depuis la réforme de 2021, la CAF utilise vos ressources des 12 derniers mois (récupérées automatiquement via le prélèvement à la source), et non plus celles d'il y a deux ans. Le calcul est actualisé tous les 3 mois.
+
+IV. PARTICIPATION MINIMALE
+Quoi qu'il arrive, une part du loyer reste toujours à votre charge (environ 36 € minimum). L'aide ne couvre jamais 100% du loyer.

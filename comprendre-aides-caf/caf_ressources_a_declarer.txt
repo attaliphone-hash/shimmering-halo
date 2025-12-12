@@ -1,0 +1,28 @@
+DOCUMENT DE RÉFÉRENCE : LES RESSOURCES À DÉCLARER À LA CAF
+SUJET : Base ressources, Déclaration trimestrielle (DTR), Épargne.
+SOURCE : caf.fr (À jour 2025)
+
+I. LE PRINCIPE : TOUT DÉCLARER
+Pour le RSA et la Prime d'Activité, vous devez faire une Déclaration Trimestrielle de Ressources (DTR) tous les 3 mois.
+La règle d'or : Vous devez déclarer TOUTES les sommes perçues par TOUS les membres du foyer durant les 3 mois précédents.
+
+II. CE QU'IL FAUT DÉCLARER (Liste non exhaustive)
+- Salaires nets (avant prélèvement à la source).
+- Allocations chômage (Pôle Emploi / France Travail).
+- Indemnités journalières de sécurité sociale (maladie, maternité).
+- Pensions alimentaires reçues.
+- Pensions de retraite, d'invalidité.
+- Revenus des travailleurs indépendants (Chiffre d'Affaires après abattement ou réel).
+- L'argent donné régulièrement par des proches (aides familiales).
+
+III. LE PIÈGE DE L'ÉPARGNE ET DU PATRIMOINE
+Pour le RSA, la CAF prend en compte votre argent de côté.
+Vous devez déclarer le montant de votre épargne disponible (Livret A, LDD, comptes courants...) et de votre épargne bloquée (PEL, assurance vie...).
+La CAF applique un "taux fictif" de 3% par an (0,25% par mois) sur cette épargne et l'ajoute à vos ressources.
+Exemple : Vous avez 10 000 € sur un Livret A. La CAF considère que cela vous rapporte 25 € par mois (10000 x 0,25%), et déduit ces 25 € de votre RSA.
+
+IV. CE QUI N'EST PAS UNE RESSOURCE (Ne pas déclarer)
+- Les autres prestations familiales de la CAF (Allocations familiales, Paje...).
+- La Prime de rentrée scolaire.
+- Les bourses d'études sur critères sociaux.
+- Le remboursement de frais professionnels (notes de frais).

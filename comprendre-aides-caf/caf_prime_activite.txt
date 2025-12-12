@@ -1,0 +1,25 @@
+DOCUMENT DE RÉFÉRENCE : LA PRIME D'ACTIVITÉ - CAF
+SUJET : Conditions, Public cible, Mécanisme de calcul.
+SOURCE : caf.fr (À jour 2025)
+
+I. OBJECTIF ET PUBLIC CIBLE
+La Prime d'activité est une aide financière destinée à inciter à la reprise ou au maintien de l'emploi. Elle complète les revenus des travailleurs aux ressources modestes.
+Elle concerne les salariés, les fonctionnaires, les indépendants, et les étudiants ou apprentis (s'ils gagnent plus de 1082,87 € nets/mois).
+
+II. CONDITIONS D'ATTRIBUTION
+- Avoir plus de 18 ans.
+- Exercer une activité professionnelle (ou être indemnisé au chômage partiel/technique).
+- Résider en France de manière stable.
+- Ne pas dépasser certains plafonds de ressources (qui dépendent de la composition du foyer).
+
+III. LE CALCUL (TRÈS COMPLEXE)
+Le calcul est une "usine à gaz" qui prend en compte :
+1. Un Montant Forfaitaire de base (env. 622 € pour une personne seule, majoré selon la famille).
+2. Une Bonification individuelle (pour chaque travailleur du foyer dont le salaire est supérieur à env. 687 € net).
+3. 61% des revenus professionnels du foyer.
+4. MOINS l'ensemble des ressources du foyer (salaires, chômage, autres prestations CAF, etc.).
+
+Le principe à retenir : Plus votre salaire augmente, plus la prime d'activité diminue, mais le total (salaire + prime) augmente quand même, pour que travailler reste toujours plus intéressant que ne pas travailler.
+
+IV. VERSEMENT
+Elle est calculée pour 3 mois fixes, sur la base de votre "Déclaration Trimestrielle de Ressources" (DTR). Le montant ne change pas pendant ces 3 mois, même si votre situation change entre-temps.
