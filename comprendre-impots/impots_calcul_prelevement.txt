@@ -1,18 +1,39 @@
-*** DOCUMENT DE RÉFÉRENCE : CALCUL DE L'IMPÔT (AVIS 2025) ***
-SUJET : Barème progressif, Décote, Seuil de recouvrement.
-SOURCE : Brochure Pratique DGFiP 2025 (Revenus 2024).
+DOCUMENT DE RÉFÉRENCE : CALCUL DE L'IMPÔT ET BARÈME (2025)
+SUJET : Tranches, TMI, Décote, Prélèvement à la source.
 
-I. LE BARÈME PROGRESSIF 2025
-[COPIER ICI LE TABLEAU DES TRANCHES : 0%, 11%, 30%, 41%, 45%]
+I. LE BARÈME PROGRESSIF 2025 (SUR REVENUS 2024)
+Les seuils ont été revalorisés de 2 % pour suivre l'inflation.
 
-II. LA DÉCOTE (POUR LES REVENUS MODESTES)
-[COPIER ICI LA FORMULE DE CALCUL DE LA DÉCOTE]
-(C'est le mécanisme qui réduit l'impôt pour les entrées de barème).
+Tranche 1 : Jusqu'à 11 520 €
+> Taux : 0 %
 
-III. LE SEUIL DE RECOUVREMENT
-[COPIER ICI LA RÈGLE : Si l'impôt est inférieur à 61€...]
+Tranche 2 : De 11 521 € à 29 373 €
+> Taux : 11 %
 
-IV. COMPRENDRE LE SOLDE (RESTE À PAYER OU RESTITUTION)
-L'avis d'imposition compare l'impôt final dû avec ce qui a été prélevé à la source en 2024.
-- Si Impôt Final > Prélèvements déjà faits = Reste à payer (Septembre).
-- Si Impôt Final < Prélèvements déjà faits = Remboursement (Été).
+Tranche 3 : De 29 374 € à 83 951 €
+> Taux : 30 %
+
+Tranche 4 : De 83 952 € à 179 814 €
+> Taux : 41 %
+
+Tranche 5 : Plus de 179 814 €
+> Taux : 45 %
+
+MÉTHODE DE CALCUL :
+On divise le revenu net imposable par le nombre de parts. On applique le barème tranche par tranche à ce résultat. On multiplie le résultat final par le nombre de parts.
+
+II. LA DÉCOTE (CORRECTIF ENTRÉE DE BARÈME)
+C'est un mécanisme qui réduit l'impôt pour les foyers modestes, même s'ils entrent dans la tranche à 11 %.
+Si votre impôt brut est inférieur à un certain seuil (env. 1 929 € pour un célibataire), la décote s'applique automatiquement pour réduire la note.
+
+III. LE PRÉLÈVEMENT À LA SOURCE (PAS)
+L'avis d'imposition reçu en été 2025 fait le bilan :
+(Impôt Total dû sur revenus 2024) MOINS (Prélèvements déjà pris sur salaire en 2024).
+
+- Si le résultat est positif (ex: + 300 €) : C'est le "Solde à payer" (prélevé fin septembre).
+- Si le résultat est négatif (ex: - 200 €) : C'est une "Restitution" (virement du fisc en juillet/août).
+- Si le montant à payer est inférieur à 61 €, il n'est pas recouvré (cadeau fiscal).
+
+IV. REVENUS DU CAPITAUX (PFU / FLAT TAX)
+Par défaut, les intérêts et dividendes subissent la Flat Tax de 30 % (12,8% Impôt + 17,2% Prélèvements sociaux).
+L'option pour le barème progressif est possible (case 2OP) si elle est plus avantageuse (souvent pour les non-imposables).

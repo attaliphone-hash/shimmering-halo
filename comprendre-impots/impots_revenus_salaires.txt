@@ -1,21 +1,34 @@
-*** DOCUMENT DE RÉFÉRENCE : REVENUS ET SALAIRES (AVIS 2025) ***
-SUJET : Salaires imposables, Frais réels, Abattement 10%, Pensions.
-SOURCE : Brochure Pratique DGFiP 2025 (Revenus 2024).
+DOCUMENT DE RÉFÉRENCE : REVENUS IMPOSABLES (2025)
+SUJET : Salaires, Frais réels, Pensions, RFR.
 
-I. TRAITEMENTS ET SALAIRES IMPOSABLES
-[COPIER ICI LA LISTE : Salaire net, primes, avantages en nature...]
+I. TRAITEMENTS ET SALAIRES
+Sont imposables :
+- Le salaire net imposable (y compris majorations).
+- Les avantages en nature (logement, voiture, nourriture fournis par l'employeur).
+- Les indemnités journalières de maladie (sauf ALD) et de maternité.
+- Les allocations chômage (ARE).
 
-II. REVENUS EXONÉRÉS (À NE PAS DÉCLARER)
-[COPIER ICI LA LISTE : Heures supplémentaires exonérées, RSA, Apprentis...]
+Sont exonérés (ne pas déclarer) :
+- RSA (Revenu de Solidarité Active).
+- Prime d'activité.
+- Prestations familiales (Allocations familiales, Paje).
+- Heures supplémentaires (exonérées jusqu'à 7 500 € par an).
 
-III. DÉDUCTION DES FRAIS PROFESSIONNELS
-Le système applique automatiquement une déduction, sauf choix contraire.
+II. LES FRAIS PROFESSIONNELS
+Le fisc considère que travailler coûte de l'argent. Il applique une déduction.
 
-Option A : La déduction forfaitaire de 10 %
-[COPIER ICI LE PLAFOND ET LE MINIMUM : Min 495€ / Max 14 171€...]
+Option A : La déduction forfaitaire de 10 % (Automatique)
+C'est le choix par défaut. Le fisc déduit 10 % de vos salaires.
+- Plafond minimum de déduction : 495 € par personne.
+- Plafond maximum de déduction : 14 171 €.
 
 Option B : Les Frais Réels
-[COPIER ICI LES RÈGLES : Kilomètres, Repas, Télétravail...]
+Si vos dépenses dépassent les 10 %, vous pouvez déclarer vos frais réels :
+- Frais kilométriques : Utiliser le barème officiel 2025 (selon CV du véhicule et distance Domicile-Travail). Limité à 80 km aller-retour par jour (sauf justification spécifique).
+- Frais de repas : Si pas de cantine, forfait de 5,20 € par repas (ou dépense réelle moins 5,20 €).
+- Frais de télétravail : Forfait de 2,60 € par jour de télétravail (max 580 €/an) ou frais réels justifiés (électricité, internet au prorata).
 
-IV. PENSIONS ET RETRAITES
-[COPIER ICI LA RÈGLE DE L'ABATTEMENT DE 10% SPÉCIFIQUE AUX RETRAITÉS]
+III. PENSIONS ET RETRAITES
+Les retraites sont imposables.
+Elles bénéficient d'un abattement spécial de 10 % (distinct de celui des salariés).
+- Plafond maximum de cet abattement : 4 321 € par foyer fiscal.

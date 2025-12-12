@@ -1,26 +1,42 @@
-*** DOCUMENT DE RÉFÉRENCE : SITUATION FAMILIALE (AVIS 2025) ***
-SUJET : Parts fiscales, Quotient familial, Mariage, Divorce, Décès.
-SOURCE : Brochure Pratique DGFiP 2025 (Revenus 2024).
+DOCUMENT DE RÉFÉRENCE : SITUATION FAMILIALE & QUOTIENT (2025)
+SUJET : Parts fiscales, Mariage, Divorce, Enfants.
 
-I. LE NOMBRE DE PARTS (QUOTIENT FAMILIAL)
-[COPIER ICI LE TEXTE OFFICIEL SUR LE CALCUL DES PARTS]
-(Cherchez le tableau : Célibataire = 1, Marié = 2, Enfants...)
+I. LE CALCUL DES PARTS (QUOTIENT FAMILIAL)
+Le système divise les revenus par un nombre de parts avant d'appliquer le barème de l'impôt.
+- Célibataire, Divorcé, Veuf (sans enfant à charge) : 1 part.
+- Marié ou Pacsé (soumis à imposition commune) : 2 parts.
 
-II. DEMI-PARTS SUPPLÉMENTAIRES (CAS PARTICULIERS)
+Enfants à charge (mineurs ou handicapés) :
+- 1er enfant : + 0,5 part.
+- 2ème enfant : + 0,5 part.
+- 3ème enfant et suivants : + 1 part par enfant.
+Exemple : Un couple marié avec 3 enfants a 4 parts (2 + 0,5 + 0,5 + 1).
+
+Enfants majeurs :
+- Ils peuvent être rattachés s'ils ont moins de 21 ans (ou moins de 25 ans si étudiants).
+- Le rattachement donne droit à la même majoration de part (0,5 part).
+
+II. CAS PARTICULIERS (DEMI-PARTS SUPPLÉMENTAIRES)
 1. Parent Isolé (Case T) :
-[COPIER ICI LA RÈGLE : Vivre seul avec enfants à charge...]
+Si vous vivez SEUL(E) avec des enfants à charge, la première demi-part (pour le 1er enfant) est transformée en 1 part entière.
+Condition : Ne pas vivre en concubinage.
 
-2. Invalidité et Anciens Combattants (Case P, Case W) :
-[COPIER ICI LA RÈGLE : Carte d'invalidité > 80%...]
+2. Invalidité (Case P) :
+Une demi-part supplémentaire (+0,5) est accordée à chaque conjoint titulaire de la carte d'invalidité (au moins 80 %) ou d'une pension militaire d'invalidité (au moins 40 %).
 
-III. CHANGEMENTS DE SITUATION EN 2024
-Attention : L'avis 2025 prend en compte la situation au 31/12/2024.
+3. Personnes âgées (Plus de 74 ans) :
+Si vous vivez seul et avez plus de 74 ans, ou si vous êtes ancien combattant (après 74 ans), vous pouvez bénéficier d'une demi-part supplémentaire sous conditions de ressources.
 
+III. ÉVÈNEMENTS FAMILIAUX EN 2024 (DÉCLARATION 2025)
 1. Mariage ou PACS en 2024 :
-[COPIER ICI LA RÈGLE : Imposition commune obligatoire sauf option l'année du mariage...]
+Principe : Une seule déclaration commune pour toute l'année.
+Option : Vous pouvez choisir l'imposition séparée pour cette année-là uniquement (souvent avantageux si revenus très différents).
 
-2. Divorce ou Séparation en 2024 :
-[COPIER ICI LA RÈGLE : Imposition séparée sur l'année entière...]
+2. Divorce ou Rupture de PACS en 2024 :
+Chaque ex-conjoint doit déposer une déclaration séparée avec ses revenus personnels de l'année entière + sa quote-part des revenus communs.
+La situation de famille est appréciée au 31 décembre 2024.
 
-3. Décès du conjoint en 2024 :
-[COPIER ICI LA RÈGLE : Deux déclarations à faire...]
+3. Décès du conjoint :
+Deux déclarations sont nécessaires :
+- Une commune (du 1er janvier à la date du décès).
+- Une personnelle pour le survivant (de la date du décès au 31 décembre).

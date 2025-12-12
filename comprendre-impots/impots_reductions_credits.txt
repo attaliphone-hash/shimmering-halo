@@ -1,22 +1,36 @@
-*** DOCUMENT DE RÉFÉRENCE : RÉDUCTIONS ET CRÉDITS (AVIS 2025) ***
-SUJET : Emploi à domicile, Garde d'enfants, Dons, Cotisations.
-SOURCE : Brochure Pratique DGFiP 2025 (Revenus 2024).
+DOCUMENT DE RÉFÉRENCE : RÉDUCTIONS ET CRÉDITS D'IMPÔT (2025)
+SUJET : Niche fiscale, Dons, Emploi à domicile.
 
-I. CRÉDIT D'IMPÔT "EMPLOI À DOMICILE"
-[COPIER ICI : 50% des dépenses, Plafond de 12 000€...]
+I. EMPLOI À DOMICILE (Crédit d'impôt 50%)
+Concerne : Femme de ménage, jardinier, soutien scolaire, garde d'enfants à domicile.
+Avantage : Crédit d'impôt égal à 50 % des dépenses engagées.
+Plafonds :
+- Dépenses limitées à 12 000 € par an (soit 6 000 € d'avantage max).
+- Majoration de 1 500 € par enfant à charge (max global 15 000 €).
+Si le crédit dépasse l'impôt dû, l'État rembourse la différence.
 
-II. CRÉDIT D'IMPÔT "GARDE D'ENFANTS" (Moins de 6 ans)
-[COPIER ICI : Crèche, Assmat, Plafond par enfant...]
+II. GARDE DES JEUNES ENFANTS (Hors domicile)
+Concerne : Crèche, Assistante maternelle (pour enfants de moins de 6 ans au 01/01/2024).
+Avantage : Crédit d'impôt de 50 % des dépenses (hors frais de nourriture et après déduction des aides CAF).
+Plafond : Dépenses limitées à 3 500 € par enfant.
+Gain maximum : 1 750 € de baisse d'impôt par enfant.
 
 III. DONS AUX ŒUVRES
-1. Organismes d'aide aux personnes en difficulté (Loi Coluche) :
-[COPIER ICI : Taux de 75%...]
+1. Organismes d'aide aux personnes en difficulté (Loi Coluche)
+Ex: Restos du Cœur, Croix-Rouge, Secours Populaire.
+Taux : 75 % du montant du don.
+Plafond : Jusqu'à 1 000 € de dons (soit 750 € de réduction max). Au-delà, on bascule sur le taux de 66%.
 
-2. Autres organismes d'intérêt général :
-[COPIER ICI : Taux de 66%...]
+2. Organismes d'intérêt général
+Ex: Associations sportives, culturelles, religieuses, recherche.
+Taux : 66 % du montant du don.
+Plafond : Dans la limite de 20 % du revenu imposable.
 
 IV. COTISATIONS SYNDICALES
-[COPIER ICI LA RÈGLE DU CRÉDIT D'IMPÔT]
+Si vous n'optez pas pour les frais réels :
+Crédit d'impôt égal à 66 % des cotisations versées.
 
 V. PENSIONS ALIMENTAIRES VERSÉES
-[COPIER ICI LES CONDITIONS DE DÉDUCTION : Enfant majeur, ascendant...]
+- Pour un enfant mineur (en cas de séparation) : Déductible totalement si fixée par un juge.
+- Pour un enfant majeur : Déductible dans la limite de 6 674 € par enfant (si justification de versement et besoin).
+- Pour un ascendant (parents) : Déductible si besoin alimentaire justifié.
