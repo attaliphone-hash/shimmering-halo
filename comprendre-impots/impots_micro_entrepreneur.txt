@@ -1,0 +1,38 @@
+DOCUMENT DE RÉFÉRENCE : RÉGIME MICRO-ENTREPRENEUR (2025)
+SUJET : Micro-BIC, Micro-BNC, Versement libératoire, Abattements.
+SOURCE : impots.gouv.fr (Brochure 2042-C-PRO).
+
+I. LES SEUILS DE CHIFFRE D'AFFAIRES (CA) 2024
+Pour bénéficier du régime micro, votre CA encaissé en 2024 ne doit pas dépasser :
+- 188 700 € pour les activités de vente de marchandises et fourniture de logement (BIC Vente).
+- 77 700 € pour les prestations de services (BIC Services) et les professions libérales (BNC).
+
+II. MÉTHODE CLASSIQUE : LE RÉGIME MICRO-FISCAL (ABATTEMENTS)
+Par défaut, vous déclarez votre Chiffre d'Affaires (CA) brut. L'administration n'applique pas vos frais réels, mais un "abattement forfaitaire" (déduction automatique) pour calculer votre bénéfice imposable.
+
+Taux de l'abattement (Vos frais supposés) :
+1. Vente de marchandises (BIC Vente) : 71 %
+   (Vous n'êtes imposé que sur 29 % de votre CA).
+2. Prestations de services commerciales/artisanales (BIC Presta) : 50 %
+   (Vous n'êtes imposé que sur 50 % de votre CA).
+3. Activités libérales (BNC) : 34 %
+   (Vous n'êtes imposé que sur 66 % de votre CA).
+
+Minimum d'abattement : 305 €. Si votre CA est très faible, le fisc déduit minimum 305 €.
+
+III. L'OPTION "VERSEMENT LIBÉRATOIRE" (L'IMPÔT SUR LE TAS)
+Si vous avez choisi cette option (sur demande à l'URSSAF), vous avez déjà payé votre impôt tout au long de l'année (chaque mois ou trimestre) en même temps que vos cotisations sociales.
+
+Taux de l'impôt déjà payé :
+- 1 % pour la vente.
+- 1,7 % pour les prestations de services (BIC).
+- 2,2 % pour les professions libérales (BNC).
+
+ATTENTION À LA DÉCLARATION :
+Même si vous avez déjà payé via le versement libératoire, VOUS DEVEZ DÉCLARER VOTRE CA sur la déclaration d'impôts (Formulaire 2042-C-PRO).
+Pourquoi ? Pour que le fisc calcule votre RFR (Revenu Fiscal de Référence), qui détermine vos droits aux aides (CAF, etc.). Vous ne repaierez pas d'impôt dessus, mais il compte pour le "niveau de vie".
+
+IV. LA CASE "2042-C-PRO"
+C'est le formulaire spécifique aux indépendants.
+- Si Versement Libératoire : Remplir les cases "Micro-Entrepreneur ayant opté pour le versement libératoire".
+- Si Régime Classique : Remplir les cases "Revenus imposables" (Micro-BIC ou Micro-BNC).

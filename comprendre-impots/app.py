@@ -14,9 +14,9 @@ import chromadb
 import time
 
 # --- 2. CONFIGURATION DE LA PAGE ---
-st.set_page_config(page_title="Comprendre Mes Impôts", page_icon="💡", layout="centered")
-st.title("Comprendre Mes Impôts 💡")
-st.caption("L'assistant expert pour décrypter votre avis d'imposition ©2025 Sylvain Attal")
+st.set_page_config(page_title="Comprendre Mes Impôts", page_icon="🏛️", layout="centered")
+st.title("Comprendre Mes Impôts 🏛️")
+st.caption("L'assistant expert pour décrypter votre avis d'imposition (Salariés & Indépendants) ©2025 Sylvain Attal")
 
 # --- 3. SÉCURITÉ & CONNEXION ---
 with st.sidebar:
@@ -27,7 +27,7 @@ with st.sidebar:
     try:
         if "GOOGLE_API_KEY" in st.secrets:
             api_key = st.secrets["GOOGLE_API_KEY"]
-            st.success("✅ Clé API connectée (Mode Illimité)")
+            st.success("✅ Clé API connectée (Illimité)")
     except:
         pass
 
@@ -38,6 +38,8 @@ with st.sidebar:
     if api_key:
         genai.configure(api_key=api_key)
 
+    st.info("ℹ️ **Note :** Cet assistant couvre les régimes courants (Salariés, Retraités, Micro-Entrepreneurs). Pour les montages complexes (Sociétés IS, Holding), consultez un expert-comptable.")
+
 if not api_key:
     st.warning("⬅️ Veuillez configurer votre clé API pour commencer.")
     st.stop()
@@ -46,8 +48,8 @@ if not api_key:
 @st.cache_resource(show_spinner=False)
 def charger_cerveau():
     client = chromadb.Client()
-    # On change de version pour être sûr qu'il recharge bien les fichiers avec le bon chemin
-    nom_collection = "impots_expert_v3_fix" 
+    # On change de version pour forcer l'intégration du fichier Micro-Entrepreneur
+    nom_collection = "impots_expert_v4_micro" 
 
     try:
         client.delete_collection(nom_collection)
@@ -57,14 +59,12 @@ def charger_cerveau():
     collection = client.create_collection(nom_collection)
 
     # --- LE CORRECTIF GPS ---
-    # On demande à Python : "Dans quel dossier se trouve ce fichier app.py ?"
+    # Permet de trouver les fichiers .txt même si l'app est lancée depuis ailleurs
     dossier_actuel = os.path.dirname(os.path.abspath(__file__))
     
-    # On cherche les fichiers .txt UNIQUEMENT dans ce dossier précis
     try:
         tous_les_fichiers = [f for f in os.listdir(dossier_actuel) if f.endswith('.txt')]
     except FileNotFoundError:
-        st.error(f"Erreur : Impossible de lire le dossier {dossier_actuel}")
         return None
     
     if not tous_les_fichiers:
@@ -76,7 +76,6 @@ def charger_cerveau():
     
     # Lecture et découpage
     for fichier in tous_les_fichiers:
-        # On reconstruit le chemin complet (ex: .../comprendre-impots/fichier.txt)
         chemin_complet = os.path.join(dossier_actuel, fichier)
         
         with open(chemin_complet, "r", encoding="utf-8") as f:
@@ -98,17 +97,9 @@ def charger_cerveau():
     # Vectorisation (Embedding)
     embeddings = []
     total = len(docs_globaux)
-    barre = st.progress(0, text=f"Lecture des documents fiscaux ({total} extraits)...")
+    barre = st.progress(0, text=f"Analyse des règles fiscales ({total} extraits)...")
     
     modele_embedding = "models/text-embedding-004"
-
-    try:
-        # Test rapide de connexion
-        genai.embed_content(model=modele_embedding, content="Test", task_type="retrieval_document")
-    except Exception as e:
-        barre.empty()
-        st.error(f"⛔️ Erreur de connexion API : {e}")
-        return None
 
     for i, doc in enumerate(docs_globaux):
         try:
@@ -131,20 +122,20 @@ with st.spinner("Initialisation de l'expert fiscal..."):
     db = charger_cerveau()
 
 if db:
-    st.success("✅ Assistant prêt à répondre sur vos impôts !")
+    st.success("✅ Assistant prêt à répondre (Salariés & Micro-Entrepreneurs) !")
 else:
-    st.error("❌ Aucun document trouvé. Vérifiez que les fichiers .txt sont bien dans le dossier 'comprendre-impots'.")
+    st.error("❌ Aucun document trouvé. Vérifiez la présence des fichiers .txt dans le dossier 'comprendre-impots'.")
 
 # Historique de conversation
 if "messages" not in st.session_state:
-    st.session_state.messages = [{"role": "assistant", "content": "Bonjour ! Je suis connecté aux barèmes officiels 2025. Quelle ligne de votre avis d'imposition voulez-vous comprendre ?"}]
+    st.session_state.messages = [{"role": "assistant", "content": "Bonjour ! Je suis à jour des barèmes 2025. Une question sur votre avis ou votre statut d'indépendant ?"}]
 
 for msg in st.session_state.messages:
-    icone = "👔" if msg["role"] == "assistant" else "👤"
+    icone = "🏛️" if msg["role"] == "assistant" else "👤"
     st.chat_message(msg["role"], avatar=icone).write(msg["content"])
 
 # Zone de saisie
-if question := st.chat_input("Votre question (ex: C'est quoi la décote ? J'ai divorcé en 2024...)"):
+if question := st.chat_input("Votre question (ex: Je suis auto-entrepreneur, comment déclarer ?..."):
     st.session_state.messages.append({"role": "user", "content": question})
     st.chat_message("user", avatar="👤").write(question)
 
@@ -159,29 +150,18 @@ if question := st.chat_input("Votre question (ex: C'est quoi la décote ? J'ai d
                 
                 # 2. Prompt Expert & Pédagogue
                 prompt = f"""Tu es un Expert Fiscaliste Pédagogue (Assistant DGFiP).
-                Ta mission : Aider l'utilisateur à comprendre son avis d'imposition 2025 (sur revenus 2024).
+                Ta mission : Aider le contribuable à comprendre son impôt 2025 (sur revenus 2024).
 
                 RÈGLES D'OR :
-                1. Base tes réponses UNIQUEMENT sur les documents fournis en contexte.
+                1. Base tes réponses UNIQUEMENT sur le contexte fourni.
                 2. Si on te demande un calcul, utilise le barème 2025 du contexte.
-                3. Sois clair, pédagogique et rassurant.
-                4. Rappelle toujours que tu donnes une estimation et que seul l'avis de la DGFiP fait foi.
+                3. Pour les Micro-Entrepreneurs : sois très vigilant à distinguer le régime "Classique" (Abattement forfaitaire) du "Versement Libératoire".
+                4. Sois clair, pédagogique et rassurant.
+                5. Rappelle toujours que tu donnes une estimation informative.
                 
                 CONTEXTE DOCUMENTAIRE :
                 {contexte}
                 
                 QUESTION DU CONTRIBUABLE : {question}"""
                 
-                # --- LE MOTEUR ---
-                # Utilisation de Gemini 2.0 Flash (Stable et Rapide)
-                model = genai.GenerativeModel('models/gemini-2.0-flash')
-                
-                reponse = model.generate_content(prompt)
-                
-                st.chat_message("assistant", avatar="👔").write(reponse.text)
-                st.session_state.messages.append({"role": "assistant", "content": reponse.text})
-            else:
-                st.warning("Je n'ai pas trouvé cette information précise dans ma base documentaire fiscale.")
-        except Exception as e:
-            st.error(f"Une erreur technique est survenue : {e}")
-        
+                # --- LE
