@@ -109,7 +109,7 @@ if prompt := st.chat_input("Ex: Quel est le montant du RSA pour une personne seu
     2. Si tu ne sais pas, dis-le.
     3. Pas de morale.
     4. Utilise des LISTES à puces, pas de tableaux.
-    5. Rappelle que c'est une estimation.
+    5. AVERTISSEMENT : Si la réponse contient des montants financiers, précise bien que ce sont des estimations. Sinon, inutile de le préciser.
     
     CONTEXTE :
     {context_text}
