@@ -137,4 +137,51 @@ else:
 
 # Historique de conversation
 if "messages" not in st.session_state:
-    st.session_state.messages = [{"role": "assistant", "content": "Bonjour !
+    st.session_state.messages = [{"role": "assistant", "content": "Bonjour ! Je suis connecté aux barèmes officiels 2025. Quelle ligne de votre avis d'imposition voulez-vous comprendre ?"}]
+
+for msg in st.session_state.messages:
+    icone = "👔" if msg["role"] == "assistant" else "👤"
+    st.chat_message(msg["role"], avatar=icone).write(msg["content"])
+
+# Zone de saisie
+if question := st.chat_input("Votre question (ex: C'est quoi la décote ? J'ai divorcé en 2024...)"):
+    st.session_state.messages.append({"role": "user", "content": question})
+    st.chat_message("user", avatar="👤").write(question)
+
+    if db:
+        try:
+            # 1. Recherche RAG
+            q_vec = genai.embed_content(model="models/text-embedding-004", content=question, task_type="retrieval_query")
+            res = db.query(query_embeddings=[q_vec['embedding']], n_results=5)
+            
+            if res['documents'] and res['documents'][0]:
+                contexte = "\n\n".join(res['documents'][0])
+                
+                # 2. Prompt Expert & Pédagogue
+                prompt = f"""Tu es un Expert Fiscaliste Pédagogue (Assistant DGFiP).
+                Ta mission : Aider l'utilisateur à comprendre son avis d'imposition 2025 (sur revenus 2024).
+
+                RÈGLES D'OR :
+                1. Base tes réponses UNIQUEMENT sur les documents fournis en contexte.
+                2. Si on te demande un calcul, utilise le barème 2025 du contexte.
+                3. Sois clair, pédagogique et rassurant.
+                4. Rappelle toujours que tu donnes une estimation et que seul l'avis de la DGFiP fait foi.
+                
+                CONTEXTE DOCUMENTAIRE :
+                {contexte}
+                
+                QUESTION DU CONTRIBUABLE : {question}"""
+                
+                # --- LE MOTEUR ---
+                # Utilisation de Gemini 2.0 Flash (Stable et Rapide)
+                model = genai.GenerativeModel('models/gemini-2.0-flash')
+                
+                reponse = model.generate_content(prompt)
+                
+                st.chat_message("assistant", avatar="👔").write(reponse.text)
+                st.session_state.messages.append({"role": "assistant", "content": reponse.text})
+            else:
+                st.warning("Je n'ai pas trouvé cette information précise dans ma base documentaire fiscale.")
+        except Exception as e:
+            st.error(f"Une erreur technique est survenue : {e}")
+        
