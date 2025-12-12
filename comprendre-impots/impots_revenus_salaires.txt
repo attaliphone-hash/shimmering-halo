@@ -1,0 +1,21 @@
+*** DOCUMENT DE RÉFÉRENCE : REVENUS ET SALAIRES (AVIS 2025) ***
+SUJET : Salaires imposables, Frais réels, Abattement 10%, Pensions.
+SOURCE : Brochure Pratique DGFiP 2025 (Revenus 2024).
+
+I. TRAITEMENTS ET SALAIRES IMPOSABLES
+[COPIER ICI LA LISTE : Salaire net, primes, avantages en nature...]
+
+II. REVENUS EXONÉRÉS (À NE PAS DÉCLARER)
+[COPIER ICI LA LISTE : Heures supplémentaires exonérées, RSA, Apprentis...]
+
+III. DÉDUCTION DES FRAIS PROFESSIONNELS
+Le système applique automatiquement une déduction, sauf choix contraire.
+
+Option A : La déduction forfaitaire de 10 %
+[COPIER ICI LE PLAFOND ET LE MINIMUM : Min 495€ / Max 14 171€...]
+
+Option B : Les Frais Réels
+[COPIER ICI LES RÈGLES : Kilomètres, Repas, Télétravail...]
+
+IV. PENSIONS ET RETRAITES
+[COPIER ICI LA RÈGLE DE L'ABATTEMENT DE 10% SPÉCIFIQUE AUX RETRAITÉS]

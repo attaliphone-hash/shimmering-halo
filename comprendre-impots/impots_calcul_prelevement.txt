@@ -1,0 +1,18 @@
+*** DOCUMENT DE RÉFÉRENCE : CALCUL DE L'IMPÔT (AVIS 2025) ***
+SUJET : Barème progressif, Décote, Seuil de recouvrement.
+SOURCE : Brochure Pratique DGFiP 2025 (Revenus 2024).
+
+I. LE BARÈME PROGRESSIF 2025
+[COPIER ICI LE TABLEAU DES TRANCHES : 0%, 11%, 30%, 41%, 45%]
+
+II. LA DÉCOTE (POUR LES REVENUS MODESTES)
+[COPIER ICI LA FORMULE DE CALCUL DE LA DÉCOTE]
+(C'est le mécanisme qui réduit l'impôt pour les entrées de barème).
+
+III. LE SEUIL DE RECOUVREMENT
+[COPIER ICI LA RÈGLE : Si l'impôt est inférieur à 61€...]
+
+IV. COMPRENDRE LE SOLDE (RESTE À PAYER OU RESTITUTION)
+L'avis d'imposition compare l'impôt final dû avec ce qui a été prélevé à la source en 2024.
+- Si Impôt Final > Prélèvements déjà faits = Reste à payer (Septembre).
+- Si Impôt Final < Prélèvements déjà faits = Remboursement (Été).
