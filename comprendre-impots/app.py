@@ -14,7 +14,7 @@ import chromadb
 import time
 
 # --- 2. CONFIGURATION DE LA PAGE ---
-st.set_page_config(page_title="Comprendre mon avis d'imposition", page_icon="💡", layout="centered")
+st.set_page_config(page_title="Comprendre Mes Impôts", page_icon="💡", layout="centered")
 st.title("Comprendre Mes Impôts 💡")
 st.caption("L'assistant expert pour décrypter votre avis d'imposition ©2025 Sylvain Attal")
 
@@ -46,7 +46,8 @@ if not api_key:
 @st.cache_resource(show_spinner=False)
 def charger_cerveau():
     client = chromadb.Client()
-    nom_collection = "paie_expert_v5" # Nouvelle version pour forcer la lecture de tous les fichiers
+    # On change de version pour être sûr qu'il recharge bien les fichiers avec le bon chemin
+    nom_collection = "impots_expert_v3_fix" 
 
     try:
         client.delete_collection(nom_collection)
@@ -55,8 +56,16 @@ def charger_cerveau():
     
     collection = client.create_collection(nom_collection)
 
-    # Récupération de TOUS les fichiers .txt (Taux + Explications)
-    tous_les_fichiers = [f for f in os.listdir('.') if f.endswith('.txt') and f != 'requirements.txt']
+    # --- LE CORRECTIF GPS ---
+    # On demande à Python : "Dans quel dossier se trouve ce fichier app.py ?"
+    dossier_actuel = os.path.dirname(os.path.abspath(__file__))
+    
+    # On cherche les fichiers .txt UNIQUEMENT dans ce dossier précis
+    try:
+        tous_les_fichiers = [f for f in os.listdir(dossier_actuel) if f.endswith('.txt')]
+    except FileNotFoundError:
+        st.error(f"Erreur : Impossible de lire le dossier {dossier_actuel}")
+        return None
     
     if not tous_les_fichiers:
         return None
@@ -67,7 +76,10 @@ def charger_cerveau():
     
     # Lecture et découpage
     for fichier in tous_les_fichiers:
-        with open(fichier, "r", encoding="utf-8") as f:
+        # On reconstruit le chemin complet (ex: .../comprendre-impots/fichier.txt)
+        chemin_complet = os.path.join(dossier_actuel, fichier)
+        
+        with open(chemin_complet, "r", encoding="utf-8") as f:
             contenu = f.read()
         
         taille_bloc = 1000
@@ -86,9 +98,8 @@ def charger_cerveau():
     # Vectorisation (Embedding)
     embeddings = []
     total = len(docs_globaux)
-    barre = st.progress(0, text=f"Lecture des documents de référence ({total} extraits)...")
+    barre = st.progress(0, text=f"Lecture des documents fiscaux ({total} extraits)...")
     
-    # Modèle d'embedding (gratuit et performant)
     modele_embedding = "models/text-embedding-004"
 
     try:
@@ -103,7 +114,7 @@ def charger_cerveau():
         try:
             res = genai.embed_content(model=modele_embedding, content=doc, task_type="retrieval_document")
             embeddings.append(res['embedding'])
-            time.sleep(0.05) # Très rapide car quota illimité maintenant
+            time.sleep(0.05) # Rapide car quota illimité
         except:
             pass
         barre.progress(min((i + 1) / total, 1.0))
@@ -116,62 +127,14 @@ def charger_cerveau():
     return None
 
 # --- 5. INTERFACE DE CHAT ---
-with st.spinner("Initialisation de l'expert..."):
+with st.spinner("Initialisation de l'expert fiscal..."):
     db = charger_cerveau()
 
 if db:
-    st.success("✅ Assistant prêt à répondre !")
+    st.success("✅ Assistant prêt à répondre sur vos impôts !")
 else:
-    st.error("❌ Aucun document trouvé. Veuillez vérifier la présence des fichiers .txt.")
+    st.error("❌ Aucun document trouvé. Vérifiez que les fichiers .txt sont bien dans le dossier 'comprendre-impots'.")
 
 # Historique de conversation
 if "messages" not in st.session_state:
-    # La phrase ci-dessous est bien sur une seule ligne pour éviter le bug
-    st.session_state.messages = [{"role": "assistant", "content": "Bonjour ! Quelle information sur vos impôts voulez-vous comprendre ?"}]
-
-for msg in st.session_state.messages:
-    # Avatar personnalisé : Cravate pour l'assistant, Bonhomme pour l'utilisateur
-    icone = "👔" if msg["role"] == "assistant" else "👤"
-    st.chat_message(msg["role"], avatar=icone).write(msg["content"])
-
-# Zone de saisie
-if question := st.chat_input("Votre question (ex: C'est quoi le quotien familial ? Que se passe-t-il en cas de divorce)"):
-    st.session_state.messages.append({"role": "user", "content": question})
-    st.chat_message("user", avatar="👤").write(question)
-
-    if db:
-        try:
-            # 1. Recherche RAG
-            q_vec = genai.embed_content(model="models/text-embedding-004", content=question, task_type="retrieval_query")
-            res = db.query(query_embeddings=[q_vec['embedding']], n_results=5)
-            
-            if res['documents'] and res['documents'][0]:
-                contexte = "\n\n".join(res['documents'][0])
-                
-                # 2. Prompt Expert & Pédagogue
-                prompt = f"""Tu es un Expert Paie et Pédagogue.
-                Ta mission : Répondre à la question du salarié en utilisant les barèmes officiels fournis ci-dessous. Et autres information fournis dans les documents txt
-                
-                Règles d'or :
-                - Ton : Bienveillant, clair, rassurant.
-                - Précision : Utilise les chiffres du contexte (Taux 2025).
-                - Si on te demande un calcul, fais-le étape par étape.
-                - Cite tes sources implicitement ("Selon les barèmes officiels...").
-                
-                DOCUMENTS DE RÉFÉRENCE (CONTEXTE) :
-                {contexte}
-                
-                QUESTION DU SALARIÉ : {question}"""
-                
-                # --- LE MOTEUR (Maintenant débridé grâce à la facturation) ---
-                # On utilise le modèle 2.0 Flash standard
-                model = genai.GenerativeModel('models/gemini-2.0-flash')
-                
-                reponse = model.generate_content(prompt)
-                
-                st.chat_message("assistant", avatar="👔").write(reponse.text)
-                st.session_state.messages.append({"role": "assistant", "content": reponse.text})
-            else:
-                st.warning("Je n'ai pas trouvé cette information dans mes documents de référence.")
-        except Exception as e:
-            st.error(f"Une erreur technique est survenue : {e}")
+    st.session_state.messages = [{"role": "assistant", "content": "Bonjour !
