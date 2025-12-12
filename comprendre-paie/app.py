@@ -1,7 +1,7 @@
 import os
 import sys
 
-# --- 1. CORRECTIF POUR LE CLOUD (Obligatoire pour Linux/Streamlit Cloud) ---
+# --- 1. CORRECTIF CLOUD ---
 try:
     __import__('pysqlite3')
     sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
@@ -13,40 +13,37 @@ import google.generativeai as genai
 import chromadb
 import time
 
-# --- 2. CONFIGURATION DE LA PAGE ---
+# --- 2. CONFIG PAGE ---
 st.set_page_config(page_title="Comprendre Ma Paie", page_icon="💡", layout="centered")
 st.title("Comprendre Ma Paie 💡")
 st.caption("L'assistant expert pour décrypter votre bulletin de salaire ©2025 Sylvain Attal")
 
-# --- 3. SÉCURITÉ & CONNEXION ---
+# --- 3. SÉCURITÉ ---
 with st.sidebar:
     st.header("🔐 Configuration")
     api_key = None
-    
-    # Tentative de récupération automatique depuis les secrets
     try:
         if "GOOGLE_API_KEY" in st.secrets:
             api_key = st.secrets["GOOGLE_API_KEY"]
-            st.success("✅ Clé API connectée (Mode Illimité)")
+            st.success("✅ Clé API connectée (Illimité)")
     except:
         pass
 
-    # Champ manuel si les secrets ne fonctionnent pas en local
     if not api_key:
-        api_key = st.text_input("Entrez votre clé API Google", type="password")
+        api_key = st.text_input("Clé API Google", type="password")
     
     if api_key:
         genai.configure(api_key=api_key)
 
 if not api_key:
-    st.warning("⬅️ Veuillez configurer votre clé API pour commencer.")
+    st.warning("⬅️ Veuillez configurer votre clé API.")
     st.stop()
 
-# --- 4. LE CERVEAU (Base de données vectorielle) ---
+# --- 4. LE CERVEAU (GPS INTÉGRÉ) ---
 @st.cache_resource(show_spinner=False)
 def charger_cerveau():
     client = chromadb.Client()
-    nom_collection = "paie_expert_v5" # Nouvelle version pour forcer la lecture de tous les fichiers
+    nom_collection = "paie_expert_v6_fix" # Nouvelle version
 
     try:
         client.delete_collection(nom_collection)
@@ -55,9 +52,14 @@ def charger_cerveau():
     
     collection = client.create_collection(nom_collection)
 
-    # Récupération de TOUS les fichiers .txt (Taux + Explications)
-    tous_les_fichiers = [f for f in os.listdir('.') if f.endswith('.txt') and f != 'requirements.txt']
+    # --- LE CORRECTIF GPS (Cherche DANS le dossier comprendre-paie) ---
+    dossier_actuel = os.path.dirname(os.path.abspath(__file__))
     
+    try:
+        tous_les_fichiers = [f for f in os.listdir(dossier_actuel) if f.endswith('.txt')]
+    except FileNotFoundError:
+        return None
+
     if not tous_les_fichiers:
         return None
 
@@ -65,9 +67,10 @@ def charger_cerveau():
     ids_globaux = []
     compteur = 0
     
-    # Lecture et découpage
+    # Lecture des fichiers
     for fichier in tous_les_fichiers:
-        with open(fichier, "r", encoding="utf-8") as f:
+        chemin_complet = os.path.join(dossier_actuel, fichier)
+        with open(chemin_complet, "r", encoding="utf-8") as f:
             contenu = f.read()
         
         taille_bloc = 1000
@@ -83,27 +86,17 @@ def charger_cerveau():
     if not docs_globaux:
         return None
 
-    # Vectorisation (Embedding)
+    # Vectorisation
     embeddings = []
     total = len(docs_globaux)
-    barre = st.progress(0, text=f"Lecture des documents de référence ({total} extraits)...")
-    
-    # Modèle d'embedding (gratuit et performant)
+    barre = st.progress(0, text=f"Analyse des règles de paie ({total} extraits)...")
     modele_embedding = "models/text-embedding-004"
-
-    try:
-        # Test rapide de connexion
-        genai.embed_content(model=modele_embedding, content="Test", task_type="retrieval_document")
-    except Exception as e:
-        barre.empty()
-        st.error(f"⛔️ Erreur de connexion API : {e}")
-        return None
 
     for i, doc in enumerate(docs_globaux):
         try:
             res = genai.embed_content(model=modele_embedding, content=doc, task_type="retrieval_document")
             embeddings.append(res['embedding'])
-            time.sleep(0.05) # Très rapide car quota illimité maintenant
+            time.sleep(0.05)
         except:
             pass
         barre.progress(min((i + 1) / total, 1.0))
@@ -115,63 +108,52 @@ def charger_cerveau():
         return collection
     return None
 
-# --- 5. INTERFACE DE CHAT ---
-with st.spinner("Initialisation de l'expert..."):
+# --- 5. CHAT ---
+with st.spinner("Initialisation de l'expert paie..."):
     db = charger_cerveau()
 
 if db:
-    st.success("✅ Assistant prêt à répondre !")
+    st.success("✅ Assistant Paie opérationnel !")
 else:
-    st.error("❌ Aucun document trouvé. Veuillez vérifier la présence des fichiers .txt.")
+    st.error("❌ Erreur : Fichiers .txt introuvables dans le dossier 'comprendre-paie'.")
 
-# Historique de conversation
 if "messages" not in st.session_state:
-    # La phrase ci-dessous est bien sur une seule ligne pour éviter le bug
-    st.session_state.messages = [{"role": "assistant", "content": "Bonjour ! Quelle ligne de votre bulletin de paie voulez-vous comprendre ?"}]
+    st.session_state.messages = [{"role": "assistant", "content": "Bonjour ! Je suis l'expert Paie. Une ligne de votre bulletin vous intrigue ?"}]
 
 for msg in st.session_state.messages:
-    # Avatar personnalisé : Cravate pour l'assistant, Bonhomme pour l'utilisateur
     icone = "👔" if msg["role"] == "assistant" else "👤"
     st.chat_message(msg["role"], avatar=icone).write(msg["content"])
 
-# Zone de saisie
-if question := st.chat_input("Votre question (ex: C'est quoi la CSG ? Mon brut est de 3000€...)"):
+if question := st.chat_input("Votre question sur la paie..."):
     st.session_state.messages.append({"role": "user", "content": question})
     st.chat_message("user", avatar="👤").write(question)
 
     if db:
         try:
-            # 1. Recherche RAG
+            # RAG
             q_vec = genai.embed_content(model="models/text-embedding-004", content=question, task_type="retrieval_query")
             res = db.query(query_embeddings=[q_vec['embedding']], n_results=5)
             
             if res['documents'] and res['documents'][0]:
                 contexte = "\n\n".join(res['documents'][0])
                 
-                # 2. Prompt Expert & Pédagogue
-                prompt = f"""Tu es un Expert Paie et Pédagogue.
-                Ta mission : Répondre à la question du salarié en utilisant les barèmes officiels fournis ci-dessous. Et autres information fournis dans les documents txt
+                # Prompt Expert
+                prompt = f"""Tu es un Expert Paie Pédagogue.
+                Réponds à la question en utilisant les barèmes officiels ci-dessous.
+                Sois précis sur les chiffres (Taux 2025) et clair dans l'explication.
                 
-                Règles d'or :
-                - Ton : Bienveillant, clair, rassurant.
-                - Précision : Utilise les chiffres du contexte (Taux 2025).
-                - Si on te demande un calcul, fais-le étape par étape.
-                - Cite tes sources implicitement ("Selon les barèmes officiels...").
-                
-                DOCUMENTS DE RÉFÉRENCE (CONTEXTE) :
+                CONTEXTE :
                 {contexte}
                 
-                QUESTION DU SALARIÉ : {question}"""
+                QUESTION : {question}"""
                 
-                # --- LE MOTEUR (Maintenant débridé grâce à la facturation) ---
-                # On utilise le modèle 2.0 Flash standard
+                # Moteur Stable
                 model = genai.GenerativeModel('models/gemini-2.0-flash')
-                
                 reponse = model.generate_content(prompt)
                 
                 st.chat_message("assistant", avatar="👔").write(reponse.text)
                 st.session_state.messages.append({"role": "assistant", "content": reponse.text})
             else:
-                st.warning("Je n'ai pas trouvé cette information dans mes documents de référence.")
+                st.warning("Je n'ai pas l'info dans mes fiches.")
         except Exception as e:
-            st.error(f"Une erreur technique est survenue : {e}")
+            st.error(f"Erreur : {e}")
