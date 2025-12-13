@@ -85,6 +85,7 @@ if "messages" not in st.session_state:
         {"role": "assistant", "content": "Bonjour ! Je connais les règles d'indemnisation chômage, y compris pour les intermittents. Une question sur vos droits ?"}
     ]
 
+# Affichage de l'historique
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
         st.markdown(msg["content"])
@@ -92,15 +93,16 @@ for msg in st.session_state.messages:
 # --- 6. LOGIQUE DE RÉPONSE (GEMINI) ---
 if prompt := st.chat_input("Ex: Combien de temps vais-je être indemnisé ?"):
     
+    # 1. Affiche le message utilisateur
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
 
-    # Recherche RAG
+    # 2. Recherche RAG (Contexte)
     results = collection.query(query_texts=[prompt], n_results=3)
     context_text = "\n\n".join(results['documents'][0])
 
-    # Prompt Système Expert
+    # 3. Prompt Système Expert
     system_prompt = f"""
     Tu es un assistant expert en assurance chômage (France Travail / ex-Pôle Emploi).
     Ta mission est d'aider l'utilisateur à comprendre ses droits (ARE) avec empathie et précision.
@@ -110,7 +112,7 @@ if prompt := st.chat_input("Ex: Combien de temps vais-je être indemnisé ?"):
     2. Si l'information n'est pas dans le contexte, dis que tu ne sais pas et conseille de contacter France Travail.
     3. Ne fais JAMAIS de morale (ex: sur la démission ou la recherche d'emploi). Reste factuel.
     4. PRÉSENTATION : Utilise systématiquement des LISTES à puces. Évite les tableaux.
-    5. AVERTISSEMENT : Si la réponse contient des montants financiers (euros), précise bien que ce sont des estimations. Sinon, inutile de le préciser.
+    5. AVERTISSEMENT : Si la réponse contient des montants financiers (euros), précise bien que ce sont des estimations.
     6. INTERMITTENTS : Si la question concerne les artistes ou techniciens (annexes 8/10), base-toi priorité sur le fichier "chomage_intermittents_spectacle".
 
     CONTEXTE (Sources Officielles) :
@@ -120,9 +122,11 @@ if prompt := st.chat_input("Ex: Combien de temps vais-je être indemnisé ?"):
     {prompt}
     """
 
+    # 4. Génération de la réponse
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         try:
+            # Utilisation du modèle rapide Gemini 2.0 Flash Exp
             model = genai.GenerativeModel('gemini-2.0-flash-exp')
             response = model.generate_content(system_prompt, stream=True)
             
@@ -137,3 +141,20 @@ if prompt := st.chat_input("Ex: Combien de temps vais-je être indemnisé ?"):
 
         except Exception as e:
             st.error(f"Une erreur est survenue : {e}")
+
+# --- 7. SYSTÈME DE FEEDBACK ---
+# S'affiche en bas de page dès qu'il y a eu un échange
+if len(st.session_state.messages) > 1:
+    st.write("---")
+    st.caption("Cette réponse vous a-t-elle aidé ?")
+    
+    # Création d'une clé unique pour chaque échange afin de ne pas mélanger les votes
+    feedback_key = f"feedback_{len(st.session_state.messages)}"
+    
+    feedback = st.feedback("thumbs", key=feedback_key)
+
+    if feedback is not None:
+        if feedback == 1:
+            st.toast("Merci pour votre retour positif ! 👍")
+        elif feedback == 0:
+            st.toast("Merci. Nous allons travailler à améliorer cette réponse. 👎")
