@@ -123,7 +123,7 @@ if prompt := st.chat_input("Ex: Combien de temps vais-je être indemnisé ?"):
     with st.chat_message("assistant"):
         message_placeholder = st.empty()
         try:
-            model = genai.GenerativeModel('gemini-2.0-flash ')
+            model = genai.GenerativeModel('gemini-2.0-flash')
             response = model.generate_content(system_prompt, stream=True)
             
             full_response = ""
