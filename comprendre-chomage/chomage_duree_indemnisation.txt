@@ -1,0 +1,23 @@
+DOCUMENT DE RÉFÉRENCE : DURÉE D'INDEMNISATION ET RÉFORME
+SOURCE : France Travail (Règles 2025)
+
+I. LE PRINCIPE DE LA RÉFORME "CONTRACYCLIQUE"
+Depuis 2023, la durée de vos droits dépend de la santé économique de la France (taux de chômage global).
+- Si le taux de chômage est inférieur à 9% (situation "verte", favorable) : La durée de vos droits est réduite de 25 %.
+- Si le taux de chômage repasse au-dessus de 9% : La réduction est annulée.
+Actuellement (2025), nous sommes en situation favorable, le coefficient de réduction de 0,75 s'applique.
+
+II. CALCUL DE LA DURÉE
+1. On calcule d'abord la durée théorique (1 jour travaillé = 1 jour indemnisé), dans la limite de 18 mois (548 jours) pour les moins de 53 ans.
+2. On applique le coefficient de 0,75.
+Exemple : Vous avez travaillé 18 mois.
+- Avant réforme : Vous aviez droit à 18 mois de chômage.
+- Aujourd'hui : Vous avez droit à 18 x 0,75 = 13,5 mois.
+
+III. DURÉE MAXIMALE SELON L'ÂGE (après réduction de 25%)
+- Moins de 53 ans : Maximum 18 mois (548 jours).
+- 53 et 54 ans : Maximum 22,5 mois (685 jours).
+- 55 ans et plus : Maximum 27 mois (822 jours).
+
+IV. FIN DE DROITS ET COMPLÉMENT
+Si vous arrivez à la fin de vos droits réduits mais que l'économie va mal à ce moment-là, un complément de fin de droits pourra éventuellement être accordé, mais ce n'est pas automatique.

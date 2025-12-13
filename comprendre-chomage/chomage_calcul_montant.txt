@@ -1,0 +1,18 @@
+DOCUMENT DE RÉFÉRENCE : CALCUL DU MONTANT DE L'ARE
+SOURCE : France Travail (Règles 2025)
+
+I. LE SALAIRE JOURNALIER DE RÉFÉRENCE (SJR)
+C'est la base du calcul. France Travail prend tous vos salaires bruts des 24 derniers mois (primes comprises) et divise ce total par le nombre de jours calendaires (travaillés ET non travaillés) entre le premier et le dernier contrat de la période.
+Cela donne votre salaire moyen par jour.
+
+II. FORMULE DE CALCUL DE L'ALLOCATION
+L'allocation journalière est le montant le plus élevé entre ces deux calculs :
+1. 40,4 % du SJR + une partie fixe (environ 13,11 € par jour).
+2. 57 % du SJR.
+
+III. PLAFONDS ET PLANCHERS
+- Montant minimum : L'allocation ne peut pas être inférieure à environ 31,97 € net par jour (sauf si vous étiez à temps partiel).
+- Montant maximum : Elle ne peut pas dépasser 75 % de votre ancien salaire journalier de référence.
+
+IV. LA DÉGRESSIVITÉ (POUR LES HAUTS REVENUS)
+Si vous aviez un salaire brut mensuel supérieur à environ 4 900 €, votre allocation peut être réduite de 30 % à partir du 7e mois d'indemnisation (sauf si vous avez plus de 57 ans).

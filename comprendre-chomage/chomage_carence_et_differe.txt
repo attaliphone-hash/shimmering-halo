@@ -1,0 +1,19 @@
+DOCUMENT DE RÉFÉRENCE : LES DÉLAIS DE CARENCE (QUAND EST-ON PAYÉ ?)
+SOURCE : France Travail (Règles 2025)
+
+I. LE DÉLAI D'ATTENTE STANDARD
+Il y a systématiquement un délai d'attente de 7 jours après votre inscription. Aucune allocation n'est versée pour cette semaine-là.
+
+II. LE DIFFÉRÉ "CONGÉS PAYÉS"
+Si votre employeur vous a payé vos congés non pris à la fin du contrat (indemnité compensatrice de congés payés), France Travail décale votre indemnisation.
+Calcul : Montant de l'indemnité CP / Votre Salaire Journalier.
+Exemple : Vous touchez 1000€ de CP et gagniez 100€/jour -> 10 jours de carence en plus.
+
+III. LE DIFFÉRÉ "SUPRA-LÉGAL" (INDEMNITÉS DE RUPTURE)
+Si vous avez touché une indemnité de départ supérieure au minimum légal (ex: une grosse prime lors d'une rupture conventionnelle ou une transaction), un différé supplémentaire s'applique.
+Calcul : Part "extra" de la prime / Diviseur (env. 102).
+Plafond : Ce différé est plafonné à 150 jours (5 mois).
+
+IV. EXEMPLE RÉCAPITULATIF
+Si vous vous inscrivez le 1er janvier mais que vous avez 7 jours d'attente + 10 jours de congés payés + 15 jours de différé supra-légal :
+Vous ne toucherez votre premier euro que 32 jours après (début février).
