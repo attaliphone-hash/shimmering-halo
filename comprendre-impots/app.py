@@ -165,7 +165,7 @@ if question := st.chat_input("Votre question (ex: Je suis auto-entrepreneur, com
                 QUESTION DU CONTRIBUABLE : {question}"""
                 
                 # --- LE MOTEUR ---
-                model = genai.GenerativeModel('models/gemini-2.0-flash')
+                model = genai.GenerativeModel('models/gemini-2.0-flash-exp')
                 
                 reponse = model.generate_content(prompt)
                 

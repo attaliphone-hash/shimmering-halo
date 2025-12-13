@@ -148,7 +148,7 @@ if question := st.chat_input("Votre question sur la paie..."):
                 QUESTION : {question}"""
                 
                 # Moteur Stable
-                model = genai.GenerativeModel('models/gemini-2.0-flash')
+                model = genai.GenerativeModel('models/gemini-2.0-flash-exp')
                 reponse = model.generate_content(prompt)
                 
                 st.chat_message("assistant", avatar="👔").write(reponse.text)
