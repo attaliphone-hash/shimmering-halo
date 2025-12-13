@@ -1,0 +1,5 @@
+streamlit
+google-generativeai
+chromadb
+pysqlite3-binary
+sentence-transformers
